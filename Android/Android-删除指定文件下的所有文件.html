@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saml.vip">
-  <title>Hello World | Sam</title>
+  <title>Android | Sam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一篇博客 博客正在完善中…">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://saml.vip/2017/09/18/hello-world/index.html">
+  <meta name="description" content="删除指定文件下的所有文件123456789101112131415161718192021222324252627 可以添加在app清理缓存功能中 写在点击事件中直接调用下面的使用方式即可 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹1. 定义一个方法2. static void deleteAllFiles(File root) &amp;#123;    File files[] = root.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Android">
+<meta property="og:url" content="http://saml.vip/Android/Android-删除指定文件下的所有文件.html">
 <meta property="og:site_name" content="Sam">
-<meta property="og:description" content="第一篇博客 博客正在完善中…">
-<meta property="og:updated_time" content="2017-09-19T03:21:38.000Z">
+<meta property="og:description" content="删除指定文件下的所有文件123456789101112131415161718192021222324252627 可以添加在app清理缓存功能中 写在点击事件中直接调用下面的使用方式即可 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹1. 定义一个方法2. static void deleteAllFiles(File root) &amp;#123;    File files[] = root.">
+<meta property="og:updated_time" content="2017-09-19T03:21:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="第一篇博客 博客正在完善中…">
+<meta name="twitter:title" content="Android">
+<meta name="twitter:description" content="删除指定文件下的所有文件123456789101112131415161718192021222324252627 可以添加在app清理缓存功能中 写在点击事件中直接调用下面的使用方式即可 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹1. 定义一个方法2. static void deleteAllFiles(File root) &amp;#123;    File files[] = root.">
   
     <link rel="alternative" href="/atom.xml" title="Sam" type="application/atom+xml">
   
@@ -171,29 +171,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Android
     </h1>
   
 
         
-        <a href="/2017/09/18/hello-world/" class="archive-article-date">
-  	<time datetime="2017-09-18T08:29:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
+        <a href="/Android/Android-删除指定文件下的所有文件.html" class="archive-article-date">
+  	<time datetime="2017-09-19T03:02:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><blockquote>
-<p>博客正在完善中…</p>
-</blockquote>
+        <h1 id="删除指定文件下的所有文件"><a href="#删除指定文件下的所有文件" class="headerlink" title="删除指定文件下的所有文件"></a>删除指定文件下的所有文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"> 可以添加在app清理缓存功能中</div><div class="line"> 写在点击事件中直接调用下面的使用方式即可</div><div class="line"> 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹</div><div class="line">1. 定义一个方法</div><div class="line">2. static void deleteAllFiles(File root) &#123;</div><div class="line">    File files[] = root.listFiles();</div><div class="line">    if (files != null)</div><div class="line">        for (File f : files) &#123;</div><div class="line">            if (f.isDirectory()) &#123; // 判断是否为文件夹</div><div class="line">                deleteAllFiles(f);</div><div class="line">                try &#123;</div><div class="line">                    f.delete();</div><div class="line">                &#125; catch (Exception e) &#123;</div><div class="line">                &#125;</div><div class="line">            &#125; else &#123;</div><div class="line">                if (f.exists()) &#123; // 判断是否存在</div><div class="line">                    deleteAllFiles(f);</div><div class="line">                    try &#123;</div><div class="line">                        f.delete();</div><div class="line">                    &#125; catch (Exception e) &#123;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">3. 使用的时候:</div><div class="line">    1. deleteAllFiles(new File(Environment.getExternalStorageDirectory()+&quot;/要删除的文件夹名称/“);</div></pre></td></tr></table></figure>
 
       
 
@@ -273,7 +271,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://saml.vip/2017/09/18/hello-world/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://saml.vip/Android/Android-删除指定文件下的所有文件.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,20 +283,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2017/09/19/Android-随记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Android
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -349,7 +333,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
