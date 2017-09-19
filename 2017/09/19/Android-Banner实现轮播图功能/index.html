@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saml.vip">
-  <title>Archives: 2017 | Sam</title>
+  <title>Android | Sam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sam">
-<meta property="og:url" content="http://saml.vip/archives/2017/index.html">
+  <meta name="description" content="Banner实现轮播图功能12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android">
+<meta property="og:url" content="http://saml.vip/2017/09/19/Android-Banner实现轮播图功能/index.html">
 <meta property="og:site_name" content="Sam">
+<meta property="og:description" content="Banner实现轮播图功能12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2.">
+<meta property="og:updated_time" content="2017-09-19T03:15:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sam">
+<meta name="twitter:title" content="Android">
+<meta name="twitter:description" content="Banner实现轮播图功能12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2.">
   
     <link rel="alternative" href="/atom.xml" title="Sam" type="application/atom+xml">
   
@@ -173,295 +177,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Android-Banner实现轮播图功能" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Mac-终端操作命令/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:12:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Mac-终端操作命令/">随记</a>
+    <h1 class="article-title" itemprop="name">
+      Android
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-Banner实现轮播图功能/" class="archive-article-date">
+        
+        <a href="/2017/09/19/Android-Banner实现轮播图功能/" class="archive-article-date">
   	<time datetime="2017-09-19T03:08:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-Banner实现轮播图功能/">Android</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Banner实现轮播图功能"><a href="#Banner实现轮播图功能" class="headerlink" title="Banner实现轮播图功能"></a>Banner实现轮播图功能</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">使用Banner添加轮播图功能之前需要先添加依赖👇：</div><div class="line">      compile  ‘com.youth.banner:banner:1.4.4’</div><div class="line">        （注意：添加Glide图片处理依赖）</div><div class="line">具体使用步骤：</div><div class="line">1. 首先在XML布局中添加Banner当做正常的ImageView来写布局</div><div class="line">2. 在Activity/Fragment中绑定Banner，并定义全局变量</div><div class="line">3. 创建轮播图的类</div><div class="line">    1. 轮播图的类需要继承ImageLoader</div><div class="line">    2. 复写ImageLoader中的displayImage方法</div><div class="line">    3. 再其方法中添加Glide.with(context).load(path).into(imageView)</div><div class="line">        1. 参数2：图片地址/网络请求图片的实体类点出来的/图片名</div><div class="line">        2. 参数3：控件（ImageView）</div><div class="line">4. 定义一个集合来承载轮播图</div><div class="line">    1. 将解析好的轮播图添加到集合</div><div class="line">5. 完善轮播图</div><div class="line">    1. 添加轮播图下面的点：banner.setBannerStyle(BannerConfig.CIRCLE_INDICAROR_TITLE);</div><div class="line">    2. 轮播图的类： banner.setImageLoader(new 轮播图的类);</div><div class="line">    3. 将集合设置个Banner：</div><div class="line">        1.  banner.setImages(承载图片的集合)；</div><div class="line">        2. banner.setBannerAnimation(Transformer.DepthPage);</div><div class="line">        3. banner.isAutoPlay(true);</div><div class="line">    4. 设置自动滚动时间：</div><div class="line">        1. banner.setDelayTime(2000);</div><div class="line">        2. banner.setIndicatorGravity(BannerConfig.CENTER);</div><div class="line">    5. 最后start开启</div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://saml.vip/2017/09/19/Android-Banner实现轮播图功能/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-倒计时功能/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:07:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/09/19/Mac-终端操作命令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          随记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/19/Android-倒计时功能/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-倒计时功能/">Android</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-使用SQLite导入外部数据库/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:07:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-使用SQLite导入外部数据库/">Android</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-PopupWindow实现弹出窗口/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:06:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-PopupWindow实现弹出窗口/">Android</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-WebView的使用方法/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:05:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-WebView的使用方法/">Android</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-Dialog实现方法/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:05:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-Dialog实现方法/">Android</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-在As中获得SHA1、MD5/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:04:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-在As中获得SHA1、MD5/">Android</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-删除指定文件下的所有文件/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:02:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-删除指定文件下的所有文件/">Android</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/19/Android-随记/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:02:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/19/Android-随记/">Android</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -485,8 +358,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
