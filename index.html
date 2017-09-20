@@ -541,11 +541,24 @@
     <article id="post-Android-WebView的使用方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/19/Android-WebView的使用方法/">WebView实现弹出窗口</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/19/Android-WebView的使用方法/" class="archive-article-date">
+  	<time datetime="2017-09-19T03:06:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: WebView的使用方法<br>date: 2017-09-19 11:05:54<br>tags:</p>
-<h2 id="Android"><a href="#Android" class="headerlink" title="- Android"></a>- Android</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">首先在Xml布局中添加WebView控件</div><div class="line">1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法</div><div class="line">2. 并且给ListVIew绑定之后设置点击事件：</div><div class="line">    1. 点击事件为setOnItemClickListenr（this）</div><div class="line">3. 创建显示二级界面的Activity</div><div class="line">4. 在onItemClick方法中填写Intent跳转</div><div class="line">    1. 定义String类型的网址（这个网址是从接口中解析出来的）</div><div class="line">    2. 将这个网址通过Intent传给对应显示的Activity</div><div class="line">    3. 最后startActivity（Intent）</div><div class="line">5. 在定义显示的Activity中</div><div class="line">    1. Intent intent = getintent（）；</div><div class="line">    2. 然后接受之前传来的网址</div><div class="line">        1. String str = intent。getStringExtra（“对应的口令”）；</div><div class="line">    3. 给WebView绑定视图</div><div class="line">    4. 给WebView绑定网址</div><div class="line">        1. webView。loadUrl（网址）</div><div class="line">    5. 设置视图</div><div class="line">        1. webView。getSettings().setJavaScriptEnabled(true);</div><div class="line">    6. 让webView显示在固定工程里</div><div class="line">        1. webView.setWebViewClient(new WebViewClient())</div><div class="line">6. 要是一级界面使用的RecycleView的话需要将方法写在RecycleView点击时间里</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">首先在Xml布局中添加WebView控件</div><div class="line">1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法</div><div class="line">2. 并且给ListVIew绑定之后设置点击事件：</div><div class="line">    1. 点击事件为setOnItemClickListenr（this）</div><div class="line">3. 创建显示二级界面的Activity</div><div class="line">4. 在onItemClick方法中填写Intent跳转</div><div class="line">    1. 定义String类型的网址（这个网址是从接口中解析出来的）</div><div class="line">    2. 将这个网址通过Intent传给对应显示的Activity</div><div class="line">    3. 最后startActivity（Intent）</div><div class="line">5. 在定义显示的Activity中</div><div class="line">    1. Intent intent = getintent（）；</div><div class="line">    2. 然后接受之前传来的网址</div><div class="line">        1. String str = intent。getStringExtra（“对应的口令”）；</div><div class="line">    3. 给WebView绑定视图</div><div class="line">    4. 给WebView绑定网址</div><div class="line">        1. webView。loadUrl（网址）</div><div class="line">    5. 设置视图</div><div class="line">        1. webView。getSettings().setJavaScriptEnabled(true);</div><div class="line">    6. 让webView显示在固定工程里</div><div class="line">        1. webView.setWebViewClient(new WebViewClient())</div><div class="line">6. 要是一级界面使用的RecycleView的话需要将方法写在RecycleView点击时间里</div></pre></td></tr></table></figure>
 
       
 
@@ -554,6 +567,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
