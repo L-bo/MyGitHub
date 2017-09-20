@@ -186,9 +186,21 @@
 <blockquote>
 <p>3.定义在显示的Activity中</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Intent intent = getintent();</div><div class="line">// 然后接受之前传来的网址</div><div class="line">String str = intent.getStringExtra(&quot;对应的值&quot;);</div><div class="line">``` </div><div class="line">&gt; 4.依次给WebView绑定视图、网址</div><div class="line"></div><div class="line">`webView.loadUrl(&quot;网址&quot;)`</div><div class="line"></div><div class="line">&gt; 5.设置视图</div></pre></td></tr></table></figure>
-<p>webView.getSttings(0.setJavaScriptEnabled(true)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt; 6.让WebView显示在固定工程里</div></pre></td></tr></table></figure></p>
-<p>webView.setWebViewClient(new WebViewClient())<br>```</p>
+<p><code>Intent intent = getintent();
+// 然后接受之前传来的网址
+String str = intent.getStringExtra(&quot;对应的值&quot;);</code> </p>
+<blockquote>
+<p>4.依次给WebView绑定视图、网址</p>
+</blockquote>
+<p><code>webView.loadUrl(&quot;网址&quot;)</code></p>
+<blockquote>
+<p>5.设置视图</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webView.getSttings(0.setJavaScriptEnabled(true)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>6.让WebView显示在固定工程里</p>
+</blockquote>
+<p><code>webView.setWebViewClient(new WebViewClient())</code></p>
 <h5 id="如果一级界面使用的是RecycleView只需要将方法写在点击事件中即可"><a href="#如果一级界面使用的是RecycleView只需要将方法写在点击事件中即可" class="headerlink" title="如果一级界面使用的是RecycleView只需要将方法写在点击事件中即可"></a>如果一级界面使用的是RecycleView只需要将方法写在点击事件中即可</h5>
       
 
