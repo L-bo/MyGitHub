@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saml.vip">
-  <title>Android | Sam</title>
+  <title>Sam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WebView的使用方法123456789101112131415161718192021首先在Xml布局中添加WebView控件1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法2. 并且给ListVIew绑定之后设置点击事件：    1. 点击事件为setOnItemClickListenr（this）3. 创建显示二级界面的Activi">
+  <meta name="description" content="title: WebView的使用方法date: 2017-09-19 11:05:54tags:  - Android123456789101112131415161718192021首先在Xml布局中添加WebView控件1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法2. 并且给ListVIew绑定之后设置点击事件：    1. 点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android">
+<meta property="og:title" content="Sam">
 <meta property="og:url" content="http://saml.vip/2017/09/19/Android-WebView的使用方法/index.html">
 <meta property="og:site_name" content="Sam">
-<meta property="og:description" content="WebView的使用方法123456789101112131415161718192021首先在Xml布局中添加WebView控件1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法2. 并且给ListVIew绑定之后设置点击事件：    1. 点击事件为setOnItemClickListenr（this）3. 创建显示二级界面的Activi">
-<meta property="og:updated_time" content="2017-09-19T03:19:30.000Z">
+<meta property="og:description" content="title: WebView的使用方法date: 2017-09-19 11:05:54tags:  - Android123456789101112131415161718192021首先在Xml布局中添加WebView控件1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法2. 并且给ListVIew绑定之后设置点击事件：    1. 点">
+<meta property="og:updated_time" content="2017-09-20T03:00:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android">
-<meta name="twitter:description" content="WebView的使用方法123456789101112131415161718192021首先在Xml布局中添加WebView控件1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法2. 并且给ListVIew绑定之后设置点击事件：    1. 点击事件为setOnItemClickListenr（this）3. 创建显示二级界面的Activi">
+<meta name="twitter:title" content="Sam">
+<meta name="twitter:description" content="title: WebView的使用方法date: 2017-09-19 11:05:54tags:  - Android123456789101112131415161718192021首先在Xml布局中添加WebView控件1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法2. 并且给ListVIew绑定之后设置点击事件：    1. 点">
   
     <link rel="alternative" href="/atom.xml" title="Sam" type="application/atom+xml">
   
@@ -58,7 +58,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/tags">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -142,7 +142,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -160,24 +160,11 @@
             <article id="post-Android-WebView的使用方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Android
-    </h1>
-  
-
-        
-        <a href="/2017/09/19/Android-WebView的使用方法/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:05:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="WebView的使用方法"><a href="#WebView的使用方法" class="headerlink" title="WebView的使用方法"></a>WebView的使用方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">首先在Xml布局中添加WebView控件</div><div class="line">1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法</div><div class="line">2. 并且给ListVIew绑定之后设置点击事件：</div><div class="line">    1. 点击事件为setOnItemClickListenr（this）</div><div class="line">3. 创建显示二级界面的Activity</div><div class="line">4. 在onItemClick方法中填写Intent跳转</div><div class="line">    1. 定义String类型的网址（这个网址是从接口中解析出来的）</div><div class="line">    2. 将这个网址通过Intent传给对应显示的Activity</div><div class="line">    3. 最后startActivity（Intent）</div><div class="line">5. 在定义显示的Activity中</div><div class="line">    1. Intent intent = getintent（）；</div><div class="line">    2. 然后接受之前传来的网址</div><div class="line">        1. String str = intent。getStringExtra（“对应的口令”）；</div><div class="line">    3. 给WebView绑定视图</div><div class="line">    4. 给WebView绑定网址</div><div class="line">        1. webView。loadUrl（网址）</div><div class="line">    5. 设置视图</div><div class="line">        1. webView。getSettings().setJavaScriptEnabled(true);</div><div class="line">    6. 让webView显示在固定工程里</div><div class="line">        1. webView.setWebViewClient(new WebViewClient())</div><div class="line">6. 要是一级界面使用的RecycleView的话需要将方法写在RecycleView点击时间里</div></pre></td></tr></table></figure>
+        <hr>
+<p>title: WebView的使用方法<br>date: 2017-09-19 11:05:54<br>tags: </p>
+<h2 id="Android"><a href="#Android" class="headerlink" title="- Android"></a>- Android</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">首先在Xml布局中添加WebView控件</div><div class="line">1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法</div><div class="line">2. 并且给ListVIew绑定之后设置点击事件：</div><div class="line">    1. 点击事件为setOnItemClickListenr（this）</div><div class="line">3. 创建显示二级界面的Activity</div><div class="line">4. 在onItemClick方法中填写Intent跳转</div><div class="line">    1. 定义String类型的网址（这个网址是从接口中解析出来的）</div><div class="line">    2. 将这个网址通过Intent传给对应显示的Activity</div><div class="line">    3. 最后startActivity（Intent）</div><div class="line">5. 在定义显示的Activity中</div><div class="line">    1. Intent intent = getintent（）；</div><div class="line">    2. 然后接受之前传来的网址</div><div class="line">        1. String str = intent。getStringExtra（“对应的口令”）；</div><div class="line">    3. 给WebView绑定视图</div><div class="line">    4. 给WebView绑定网址</div><div class="line">        1. webView。loadUrl（网址）</div><div class="line">    5. 设置视图</div><div class="line">        1. webView。getSettings().setJavaScriptEnabled(true);</div><div class="line">    6. 让webView显示在固定工程里</div><div class="line">        1. webView.setWebViewClient(new WebViewClient())</div><div class="line">6. 要是一级界面使用的RecycleView的话需要将方法写在RecycleView点击时间里</div></pre></td></tr></table></figure>
 
       
 
@@ -285,14 +272,14 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Android
+          PopupWindow实现弹出窗口
         
       </div>
     </a>
   
   
     <a href="/2017/09/19/Android-Dialog实现方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android</div>
+      <div class="article-nav-title">Dialog实现方法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -320,7 +307,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Android-WebView的使用方法" data-title="Android" data-url="http://saml.vip/2017/09/19/Android-WebView的使用方法/"></div>
+	<div class="ds-thread" data-thread-key="Android-WebView的使用方法" data-title="" data-url="http://saml.vip/2017/09/19/Android-WebView的使用方法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -464,7 +451,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
             
             <div class="clearfix"></div>

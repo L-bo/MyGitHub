@@ -6,15 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saml.vip">
-  <title>tags | Sam</title>
+  <title>随记 | Sam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
+  <meta name="description" content="okhttp 封装 张洪洋的博客中摘取,并且下载Demo 进行用到功能的摘抄与整理请求成功后得到字符串,但是返回的是实体类形式,需要使用json转化成实体类进行操作 ImageLoader进行图片加载,需要判断是不是https如果是https需要使用另一种方法进行封装添加证书才能加载时间戳转换成时间的方法,待完善 数字保留两位小数 需要定义成float类型 将float变量/100.00 Str">
+<meta property="og:type" content="website">
+<meta property="og:title" content="随记">
 <meta property="og:url" content="http://saml.vip/tags/index.html">
 <meta property="og:site_name" content="Sam">
-<meta property="og:updated_time" content="2017-09-20T01:49:49.000Z">
+<meta property="og:description" content="okhttp 封装 张洪洋的博客中摘取,并且下载Demo 进行用到功能的摘抄与整理请求成功后得到字符串,但是返回的是实体类形式,需要使用json转化成实体类进行操作 ImageLoader进行图片加载,需要判断是不是https如果是https需要使用另一种方法进行封装添加证书才能加载时间戳转换成时间的方法,待完善 数字保留两位小数 需要定义成float类型 将float变量/100.00 Str">
+<meta property="og:updated_time" content="2017-09-20T02:55:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="随记">
+<meta name="twitter:description" content="okhttp 封装 张洪洋的博客中摘取,并且下载Demo 进行用到功能的摘抄与整理请求成功后得到字符串,但是返回的是实体类形式,需要使用json转化成实体类进行操作 ImageLoader进行图片加载,需要判断是不是https如果是https需要使用另一种方法进行封装添加证书才能加载时间戳转换成时间的方法,待完善 数字保留两位小数 需要定义成float类型 将float变量/100.00 Str">
   
     <link rel="alternative" href="/atom.xml" title="Sam" type="application/atom+xml">
   
@@ -55,7 +58,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/tags">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -139,7 +142,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -161,7 +164,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      随记
     </h1>
   
 
@@ -174,7 +177,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ul>
+<li>okhttp 封装 张洪洋的博客中摘取,并且下载Demo 进行用到功能的摘抄与整理<br>请求成功后得到字符串,但是返回的是实体类形式,需要使用json转化成实体类进行操作</li>
+<li>ImageLoader进行图片加载,需要判断是不是https如果是https需要使用另一种方法进行封装添加证书才能加载<br>时间戳转换成时间的方法,待完善</li>
+<li>数字保留两位小数<br> 需要定义成float类型<br> 将float变量/100.00</li>
+<li>String 字符串截取</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>str </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Pattern p = Pattern.compile(&quot;\\d+&quot;);  </div><div class="line">Matcher m = p.matcher(str);  </div><div class="line">m.find();</div></pre></td></tr></table></figure>
+<ul>
+<li>Android 中 bitmap转成String字符串的方法</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>static String bitmaptoString(Bitmap bitmap) &#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">String string = null;</div><div class="line">ByteArrayOutputStream bStream = new ByteArrayOutputStream(); </div><div class="line">bitmap.compress(CompressFormat.PNG, 40, bStream);</div><div class="line">byte[] bytes = bStream.toByteArray();</div><div class="line">string = Base64.encodeToString(bytes, Base64.DEFAULT);</div><div class="line">return string;</div></pre></td></tr></table></figure>
+<ul>
+<li>TextView 显示固定字符数之后自动换行:<br><code>android:maxEms=“每行固定显示的字数”</code></li>
+</ul>
+
       
 
       
@@ -297,7 +314,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="" data-title="tags" data-url="http://saml.vip/tags/index.html"></div>
+	<div class="ds-thread" data-thread-key="" data-title="随记" data-url="http://saml.vip/tags/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -441,7 +458,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
             
             <div class="clearfix"></div>

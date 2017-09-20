@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saml.vip">
-  <title>Android | Sam</title>
+  <title>Banner实现轮播图功能 | Sam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Banner实现轮播图功能12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2.">
+  <meta name="description" content="12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2. 在Activity/Fr">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android">
+<meta property="og:title" content="Banner实现轮播图功能">
 <meta property="og:url" content="http://saml.vip/2017/09/19/Android-Banner实现轮播图功能/index.html">
 <meta property="og:site_name" content="Sam">
-<meta property="og:description" content="Banner实现轮播图功能12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2.">
-<meta property="og:updated_time" content="2017-09-19T03:15:12.000Z">
+<meta property="og:description" content="12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2. 在Activity/Fr">
+<meta property="og:updated_time" content="2017-09-20T02:59:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android">
-<meta name="twitter:description" content="Banner实现轮播图功能12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2.">
+<meta name="twitter:title" content="Banner实现轮播图功能">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425使用Banner添加轮播图功能之前需要先添加依赖👇：      compile  ‘com.youth.banner:banner:1.4.4’        （注意：添加Glide图片处理依赖）具体使用步骤：1. 首先在XML布局中添加Banner当做正常的ImageView来写布局2. 在Activity/Fr">
   
     <link rel="alternative" href="/atom.xml" title="Sam" type="application/atom+xml">
   
@@ -58,7 +59,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/tags">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -142,7 +143,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -164,7 +165,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android
+      Banner实现轮播图功能
     </h1>
   
 
@@ -177,7 +178,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Banner实现轮播图功能"><a href="#Banner实现轮播图功能" class="headerlink" title="Banner实现轮播图功能"></a>Banner实现轮播图功能</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">使用Banner添加轮播图功能之前需要先添加依赖👇：</div><div class="line">      compile  ‘com.youth.banner:banner:1.4.4’</div><div class="line">        （注意：添加Glide图片处理依赖）</div><div class="line">具体使用步骤：</div><div class="line">1. 首先在XML布局中添加Banner当做正常的ImageView来写布局</div><div class="line">2. 在Activity/Fragment中绑定Banner，并定义全局变量</div><div class="line">3. 创建轮播图的类</div><div class="line">    1. 轮播图的类需要继承ImageLoader</div><div class="line">    2. 复写ImageLoader中的displayImage方法</div><div class="line">    3. 再其方法中添加Glide.with(context).load(path).into(imageView)</div><div class="line">        1. 参数2：图片地址/网络请求图片的实体类点出来的/图片名</div><div class="line">        2. 参数3：控件（ImageView）</div><div class="line">4. 定义一个集合来承载轮播图</div><div class="line">    1. 将解析好的轮播图添加到集合</div><div class="line">5. 完善轮播图</div><div class="line">    1. 添加轮播图下面的点：banner.setBannerStyle(BannerConfig.CIRCLE_INDICAROR_TITLE);</div><div class="line">    2. 轮播图的类： banner.setImageLoader(new 轮播图的类);</div><div class="line">    3. 将集合设置个Banner：</div><div class="line">        1.  banner.setImages(承载图片的集合)；</div><div class="line">        2. banner.setBannerAnimation(Transformer.DepthPage);</div><div class="line">        3. banner.isAutoPlay(true);</div><div class="line">    4. 设置自动滚动时间：</div><div class="line">        1. banner.setDelayTime(2000);</div><div class="line">        2. banner.setIndicatorGravity(BannerConfig.CENTER);</div><div class="line">    5. 最后start开启</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">使用Banner添加轮播图功能之前需要先添加依赖👇：</div><div class="line">      compile  ‘com.youth.banner:banner:1.4.4’</div><div class="line">        （注意：添加Glide图片处理依赖）</div><div class="line">具体使用步骤：</div><div class="line">1. 首先在XML布局中添加Banner当做正常的ImageView来写布局</div><div class="line">2. 在Activity/Fragment中绑定Banner，并定义全局变量</div><div class="line">3. 创建轮播图的类</div><div class="line">    1. 轮播图的类需要继承ImageLoader</div><div class="line">    2. 复写ImageLoader中的displayImage方法</div><div class="line">    3. 再其方法中添加Glide.with(context).load(path).into(imageView)</div><div class="line">        1. 参数2：图片地址/网络请求图片的实体类点出来的/图片名</div><div class="line">        2. 参数3：控件（ImageView）</div><div class="line">4. 定义一个集合来承载轮播图</div><div class="line">    1. 将解析好的轮播图添加到集合</div><div class="line">5. 完善轮播图</div><div class="line">    1. 添加轮播图下面的点：banner.setBannerStyle(BannerConfig.CIRCLE_INDICAROR_TITLE);</div><div class="line">    2. 轮播图的类： banner.setImageLoader(new 轮播图的类);</div><div class="line">    3. 将集合设置个Banner：</div><div class="line">        1.  banner.setImages(承载图片的集合)；</div><div class="line">        2. banner.setBannerAnimation(Transformer.DepthPage);</div><div class="line">        3. banner.isAutoPlay(true);</div><div class="line">    4. 设置自动滚动时间：</div><div class="line">        1. banner.setDelayTime(2000);</div><div class="line">        2. banner.setIndicatorGravity(BannerConfig.CENTER);</div><div class="line">    5. 最后start开启</div></pre></td></tr></table></figure>
 
       
 
@@ -217,6 +218,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -285,14 +297,14 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          随记
+          Mac 终端操作命令
         
       </div>
     </a>
   
   
     <a href="/2017/09/19/Android-倒计时功能/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android</div>
+      <div class="article-nav-title">倒计时功能</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -320,7 +332,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Android-Banner实现轮播图功能" data-title="Android" data-url="http://saml.vip/2017/09/19/Android-Banner实现轮播图功能/"></div>
+	<div class="ds-thread" data-thread-key="Android-Banner实现轮播图功能" data-title="Banner实现轮播图功能" data-url="http://saml.vip/2017/09/19/Android-Banner实现轮播图功能/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -464,7 +476,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
             
             <div class="clearfix"></div>

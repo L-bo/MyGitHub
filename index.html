@@ -54,7 +54,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/tags">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -138,7 +138,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -162,7 +162,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Mac-终端操作命令/">随记</a>
+      <a class="article-title" href="/2017/09/19/Mac-终端操作命令/">Mac 终端操作命令</a>
     </h1>
   
 
@@ -175,7 +175,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Mac-终端操作命令"><a href="#Mac-终端操作命令" class="headerlink" title="Mac 终端操作命令"></a>Mac 终端操作命令</h1><blockquote>
+        <blockquote>
 <p>1.defaults write com.apple.finder AppleShowAllFiles -bool false   -  关闭显示隐藏文件<br>2.defaults write com.apple.finder AppleShowAllFiles -bool true    - 显示隐藏文件</p>
 </blockquote>
 
@@ -186,7 +186,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Mac</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/随记//" class="article-tag-list-link color3">随记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -227,7 +249,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-Banner实现轮播图功能/">Android</a>
+      <a class="article-title" href="/2017/09/19/Android-Banner实现轮播图功能/">Banner实现轮播图功能</a>
     </h1>
   
 
@@ -240,7 +262,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Banner实现轮播图功能"><a href="#Banner实现轮播图功能" class="headerlink" title="Banner实现轮播图功能"></a>Banner实现轮播图功能</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">使用Banner添加轮播图功能之前需要先添加依赖👇：</div><div class="line">      compile  ‘com.youth.banner:banner:1.4.4’</div><div class="line">        （注意：添加Glide图片处理依赖）</div><div class="line">具体使用步骤：</div><div class="line">1. 首先在XML布局中添加Banner当做正常的ImageView来写布局</div><div class="line">2. 在Activity/Fragment中绑定Banner，并定义全局变量</div><div class="line">3. 创建轮播图的类</div><div class="line">    1. 轮播图的类需要继承ImageLoader</div><div class="line">    2. 复写ImageLoader中的displayImage方法</div><div class="line">    3. 再其方法中添加Glide.with(context).load(path).into(imageView)</div><div class="line">        1. 参数2：图片地址/网络请求图片的实体类点出来的/图片名</div><div class="line">        2. 参数3：控件（ImageView）</div><div class="line">4. 定义一个集合来承载轮播图</div><div class="line">    1. 将解析好的轮播图添加到集合</div><div class="line">5. 完善轮播图</div><div class="line">    1. 添加轮播图下面的点：banner.setBannerStyle(BannerConfig.CIRCLE_INDICAROR_TITLE);</div><div class="line">    2. 轮播图的类： banner.setImageLoader(new 轮播图的类);</div><div class="line">    3. 将集合设置个Banner：</div><div class="line">        1.  banner.setImages(承载图片的集合)；</div><div class="line">        2. banner.setBannerAnimation(Transformer.DepthPage);</div><div class="line">        3. banner.isAutoPlay(true);</div><div class="line">    4. 设置自动滚动时间：</div><div class="line">        1. banner.setDelayTime(2000);</div><div class="line">        2. banner.setIndicatorGravity(BannerConfig.CENTER);</div><div class="line">    5. 最后start开启</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">使用Banner添加轮播图功能之前需要先添加依赖👇：</div><div class="line">      compile  ‘com.youth.banner:banner:1.4.4’</div><div class="line">        （注意：添加Glide图片处理依赖）</div><div class="line">具体使用步骤：</div><div class="line">1. 首先在XML布局中添加Banner当做正常的ImageView来写布局</div><div class="line">2. 在Activity/Fragment中绑定Banner，并定义全局变量</div><div class="line">3. 创建轮播图的类</div><div class="line">    1. 轮播图的类需要继承ImageLoader</div><div class="line">    2. 复写ImageLoader中的displayImage方法</div><div class="line">    3. 再其方法中添加Glide.with(context).load(path).into(imageView)</div><div class="line">        1. 参数2：图片地址/网络请求图片的实体类点出来的/图片名</div><div class="line">        2. 参数3：控件（ImageView）</div><div class="line">4. 定义一个集合来承载轮播图</div><div class="line">    1. 将解析好的轮播图添加到集合</div><div class="line">5. 完善轮播图</div><div class="line">    1. 添加轮播图下面的点：banner.setBannerStyle(BannerConfig.CIRCLE_INDICAROR_TITLE);</div><div class="line">    2. 轮播图的类： banner.setImageLoader(new 轮播图的类);</div><div class="line">    3. 将集合设置个Banner：</div><div class="line">        1.  banner.setImages(承载图片的集合)；</div><div class="line">        2. banner.setBannerAnimation(Transformer.DepthPage);</div><div class="line">        3. banner.isAutoPlay(true);</div><div class="line">    4. 设置自动滚动时间：</div><div class="line">        1. banner.setDelayTime(2000);</div><div class="line">        2. banner.setIndicatorGravity(BannerConfig.CENTER);</div><div class="line">    5. 最后start开启</div></pre></td></tr></table></figure>
 
       
 
@@ -249,6 +271,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -290,7 +323,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-倒计时功能/">Android</a>
+      <a class="article-title" href="/2017/09/19/Android-倒计时功能/">倒计时功能</a>
     </h1>
   
 
@@ -303,7 +336,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="倒计时功能"><a href="#倒计时功能" class="headerlink" title="倒计时功能"></a>倒计时功能</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">该功能主要应用在欢迎页等需要计时的功能中</div><div class="line">(倒计时时间显示可完善 - 进度条)</div><div class="line">代码(以欢迎页为例)：</div><div class="line">1. 首先在XML布局中填写一个TextView用来存放倒计时时间，如果是现实本地图片则需要在放置ImageView控件用来存放显示的图片， 布局可使用relativeLayout，这样ImageView就可以直接当成背景图片来使用</div><div class="line">2. 在Activity中对两个控件进行绑定(因为添加了点击跳转功能，所以要给TextView添加点击事件)</div><div class="line">3. 定义全局CountDownTimer</div><div class="line">4. 在TextView的点击事件里：</div><div class="line">    1. CountDownTimer.cancel()； // 取消掉CountDownTimer，防止计时结束进行二次跳转</div><div class="line">    2. 然后同样在点击事件里写Intent跳转Activity</div><div class="line">    3. 注意添加finish()； //  加finish是因为防止退出程序是再次回到欢迎页面</div><div class="line">    4. 注意：会先执行完整个方法在跳转，而不是startActivity之后马上跳转</div><div class="line">5. 设置定时器：</div><div class="line">    1. 需要对CountDownTimer进行初始化， CountDownTimer( , )的两个参数:</div><div class="line">        1. 一共多少毫秒走完了之后执行OnFinish方法</div><div class="line">        2. 每次消耗多少毫秒，走完了之后执行onTick方法</div><div class="line">    2. 在onTick方法中设置倒计时文字显示(OnTick参数 - 主线程方法)：</div><div class="line">        1. 参数：当前还剩多少毫秒</div><div class="line">        2. 设置文字显示：setText（参数 / 1000 + “s”）；</div><div class="line">            1. “S”为倒计时后面的单位</div><div class="line">    3. 在onFinish中给textView设置文字并添加Intent跳转</div><div class="line">        1. 此方法中设置的文字是倒计时走完了之后显示的文字</div><div class="line">        2. intent跳转之后需要添加finish，为了防止再次进入欢迎界面</div><div class="line">    4. 最后开启计时器</div><div class="line">        1. CountDownTimer.start();</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">该功能主要应用在欢迎页等需要计时的功能中</div><div class="line">(倒计时时间显示可完善 - 进度条)</div><div class="line">代码(以欢迎页为例)：</div><div class="line">1. 首先在XML布局中填写一个TextView用来存放倒计时时间，如果是现实本地图片则需要在放置ImageView控件用来存放显示的图片， 布局可使用relativeLayout，这样ImageView就可以直接当成背景图片来使用</div><div class="line">2. 在Activity中对两个控件进行绑定(因为添加了点击跳转功能，所以要给TextView添加点击事件)</div><div class="line">3. 定义全局CountDownTimer</div><div class="line">4. 在TextView的点击事件里：</div><div class="line">    1. CountDownTimer.cancel()； // 取消掉CountDownTimer，防止计时结束进行二次跳转</div><div class="line">    2. 然后同样在点击事件里写Intent跳转Activity</div><div class="line">    3. 注意添加finish()； //  加finish是因为防止退出程序是再次回到欢迎页面</div><div class="line">    4. 注意：会先执行完整个方法在跳转，而不是startActivity之后马上跳转</div><div class="line">5. 设置定时器：</div><div class="line">    1. 需要对CountDownTimer进行初始化， CountDownTimer( , )的两个参数:</div><div class="line">        1. 一共多少毫秒走完了之后执行OnFinish方法</div><div class="line">        2. 每次消耗多少毫秒，走完了之后执行onTick方法</div><div class="line">    2. 在onTick方法中设置倒计时文字显示(OnTick参数 - 主线程方法)：</div><div class="line">        1. 参数：当前还剩多少毫秒</div><div class="line">        2. 设置文字显示：setText（参数 / 1000 + “s”）；</div><div class="line">            1. “S”为倒计时后面的单位</div><div class="line">    3. 在onFinish中给textView设置文字并添加Intent跳转</div><div class="line">        1. 此方法中设置的文字是倒计时走完了之后显示的文字</div><div class="line">        2. intent跳转之后需要添加finish，为了防止再次进入欢迎界面</div><div class="line">    4. 最后开启计时器</div><div class="line">        1. CountDownTimer.start();</div></pre></td></tr></table></figure>
 
       
 
@@ -324,17 +357,6 @@
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
         <p class="article-more-link">
@@ -375,7 +397,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-使用SQLite导入外部数据库/">Android</a>
+      <a class="article-title" href="/2017/09/19/Android-使用SQLite导入外部数据库/">使用SQLite导入外部数据库</a>
     </h1>
   
 
@@ -388,7 +410,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="使用SQLite导入外部数据库"><a href="#使用SQLite导入外部数据库" class="headerlink" title="使用SQLite导入外部数据库"></a>使用SQLite导入外部数据库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">需要用到的知识点有数据库的查找、数据库的查询、以及读流、保存本地等。。。</div><div class="line">1. 先通过控制台找到想用的数据库并导出</div><div class="line">    1. 此处使用的是SQLite语句</div><div class="line">2. 将导出的数据库导入到自己项目res下的raw文件夹</div><div class="line">3. 创建一个类用来将数据库倒成可读写的文件，并保存到本地，然后可在该类中添加数据库的操作方法</div><div class="line">4. 具体工具类的创建👇:</div><div class="line">    1. 首先需要先定义数据库的存储空间大小</div><div class="line">    2. 定义全局自己的数据库名字（别忘了.db后缀名）</div><div class="line">    3. 定义全局的包名</div><div class="line">    4. 定义保存在手里存放数据库的位置(具体代码👇)：</div><div class="line">        1. “/data”+Environment.getDataDirectory().getAbsolutePath()+”/”+定义过得全局包名;</div><div class="line">    5. 定义全局的SQLiteDatabase</div><div class="line">    6. 全局Context</div><div class="line">    7. 还需要一个SQLiteDatabase用于以后的数据库查询</div><div class="line">    8. 添加构造方法参数为Context</div><div class="line">    9. 在定义一个无返回值的方法，用来打开数据库，方法内👇：</div><div class="line">        1. this.定义过得SQLiteDatabase=this.openDatabase(存放在手机里的位置+“/”+数据库名字)；</div><div class="line">    10. 自定义带参数的构造方法参数为（String  xxx）</div><div class="line">        1. 需要将以下内容放进try，cath里</div><div class="line">        2. 然后进行判断数据库文件书否存在，若不存在则执行导入，否则直接打开数据库，判断里的内容</div><div class="line">            1. !(new File(xxx).exists)</div><div class="line">        3. 添加如导入的数据库</div><div class="line">            1. InputStream is =this.context.getResources().openRawResource(R.raw.导入的外部数据库名称）</div><div class="line">            2. FileOutputStream for = new FileOutputStream(构造方法中的参数)</div><div class="line">            3. byte[] buffer = new byte[数据库存贮的最大空间]</div><div class="line">            4. 定义int类型的变量并赋值为0</div><div class="line">                1. while循环，循环参数👇：</div><div class="line">                    1. count = is.read(buffer) &gt; 0</div><div class="line">                2. 循环的内容👇：</div><div class="line">                    1. fos.write(buffer, 0, count)</div><div class="line">            5. 关流(fos.close)&amp;&amp;is.close</div><div class="line">            6. 打开或者创建一个数据库并定义成全局SQLiteDatabase</div><div class="line">                1. SQLiteDatabase db = SQLiteDatabase。openOrCreateDatabase(dbfile， null)；</div><div class="line">                2. return db；</div><div class="line">        4. 接下来就可以写数据库的CRUD方法了</div><div class="line">    11. 在其他类调用的时候只需要用无惨的构造方法点到承载数据库操作的方法就好了</div><div class="line">    12. 在要使用的地方new 一个DBMeager然后获得数据库的读写权限，使用后记得调用关闭数据库的方法。</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">需要用到的知识点有数据库的查找、数据库的查询、以及读流、保存本地等。。。</div><div class="line">1. 先通过控制台找到想用的数据库并导出</div><div class="line">    1. 此处使用的是SQLite语句</div><div class="line">2. 将导出的数据库导入到自己项目res下的raw文件夹</div><div class="line">3. 创建一个类用来将数据库倒成可读写的文件，并保存到本地，然后可在该类中添加数据库的操作方法</div><div class="line">4. 具体工具类的创建👇:</div><div class="line">    1. 首先需要先定义数据库的存储空间大小</div><div class="line">    2. 定义全局自己的数据库名字（别忘了.db后缀名）</div><div class="line">    3. 定义全局的包名</div><div class="line">    4. 定义保存在手里存放数据库的位置(具体代码👇)：</div><div class="line">        1. “/data”+Environment.getDataDirectory().getAbsolutePath()+”/”+定义过得全局包名;</div><div class="line">    5. 定义全局的SQLiteDatabase</div><div class="line">    6. 全局Context</div><div class="line">    7. 还需要一个SQLiteDatabase用于以后的数据库查询</div><div class="line">    8. 添加构造方法参数为Context</div><div class="line">    9. 在定义一个无返回值的方法，用来打开数据库，方法内👇：</div><div class="line">        1. this.定义过得SQLiteDatabase=this.openDatabase(存放在手机里的位置+“/”+数据库名字)；</div><div class="line">    10. 自定义带参数的构造方法参数为（String  xxx）</div><div class="line">        1. 需要将以下内容放进try，cath里</div><div class="line">        2. 然后进行判断数据库文件书否存在，若不存在则执行导入，否则直接打开数据库，判断里的内容</div><div class="line">            1. !(new File(xxx).exists)</div><div class="line">        3. 添加如导入的数据库</div><div class="line">            1. InputStream is =this.context.getResources().openRawResource(R.raw.导入的外部数据库名称）</div><div class="line">            2. FileOutputStream for = new FileOutputStream(构造方法中的参数)</div><div class="line">            3. byte[] buffer = new byte[数据库存贮的最大空间]</div><div class="line">            4. 定义int类型的变量并赋值为0</div><div class="line">                1. while循环，循环参数👇：</div><div class="line">                    1. count = is.read(buffer) &gt; 0</div><div class="line">                2. 循环的内容👇：</div><div class="line">                    1. fos.write(buffer, 0, count)</div><div class="line">            5. 关流(fos.close)&amp;&amp;is.close</div><div class="line">            6. 打开或者创建一个数据库并定义成全局SQLiteDatabase</div><div class="line">                1. SQLiteDatabase db = SQLiteDatabase。openOrCreateDatabase(dbfile， null)；</div><div class="line">                2. return db；</div><div class="line">        4. 接下来就可以写数据库的CRUD方法了</div><div class="line">    11. 在其他类调用的时候只需要用无惨的构造方法点到承载数据库操作的方法就好了</div><div class="line">    12. 在要使用的地方new 一个DBMeager然后获得数据库的读写权限，使用后记得调用关闭数据库的方法。</div></pre></td></tr></table></figure>
 
       
 
@@ -409,17 +431,6 @@
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
         <p class="article-more-link">
@@ -460,7 +471,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-PopupWindow实现弹出窗口/">Android</a>
+      <a class="article-title" href="/2017/09/19/Android-PopupWindow实现弹出窗口/">PopupWindow实现弹出窗口</a>
     </h1>
   
 
@@ -473,7 +484,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="PopupWindow实现弹出窗口"><a href="#PopupWindow实现弹出窗口" class="headerlink" title="PopupWindow实现弹出窗口"></a>PopupWindow实现弹出窗口</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">popupWindow可以弹出一个浮动的窗口，可以显示在屏幕上任意的位置，比对话框更灵活，也可以通过setAnimationStyle方法设置popupWindow显示隐藏动画</div><div class="line">1. 让PopupWindow显示在某个控件之下</div><div class="line">    1. 在Activity或Fragment布局上添加控件，并添加该控件的点击事件，点击弹出PopupWindow</div><div class="line">    2. 先定义PopupWindow布局(布局中可以使用任意组件，若是RecycleLayout、ListView应在铺完主布局后再添加对应的item)</div><div class="line">    3. 在Activity或Fragent上绑定布局id</div><div class="line">    4. 自定义Void方法并在最外层布局中控件的点击事件里调用此方法，</div><div class="line">        1. 在方法内抽取PopupWindow布局</div><div class="line">        2. 设置PopupWindow弹出是的宽高</div><div class="line">            1. new PopupWindow（popup布局，LinearLayout.LayoutParams.宽，Line...ms.高）</div><div class="line">        3. 设置允许在外点击消失，必须给PopupWindow设置背景才会有效</div><div class="line">            1. pop.setOutsideTouchable(true);</div><div class="line">            2. pop.setBackgroundDrawable(new BitmapDrawable());</div><div class="line">        4. 让PopupWindow显示的位置</div><div class="line">            1. PopupWindow。showAsDropDown（显示在该控件下方，X位置偏移量，Y位置偏移量）</div><div class="line">2. 让PopupWindow显示在指定位置，从下往上弹出</div><div class="line">    1. 自定义方法</div><div class="line">        1. 在方法内抽取布局</div><div class="line">        2. 设置宽高</div><div class="line">        3. 设置允许在外点击消失</div><div class="line">        4. 设置背景颜色</div><div class="line">            1. setBackgroundDrawable(new ColorDrawable(颜色值))</div><div class="line">        5. 设置动画效果</div><div class="line">            1. setAnimationStyle(R.id动画的布局文件);</div><div class="line">        6. 让PopupWindow显示</div><div class="line">            1. 参数1：根视图，整个PopupWindow界面最顶层</div><div class="line">            2. 参数2：显示位置</div><div class="line">            3. 具体代码👇：</div><div class="line">                1. PopupWindow.showAtLocation(getWindow().getDecorView(),Gravity.BOTTOM,0,0)；</div><div class="line">3. PopupWindow点击跳转到对应的Fragment</div><div class="line">    1. 如果PopupWindow中放的是RecycleView</div><div class="line">        1. 那么首先就要先定义RecycleView的点击事件</div><div class="line">            1. 定义的点击事件必须是接口形式的存在interface</div><div class="line">            2. 可以直接存在使用点击事件的类中，也可以单独写一个接口类</div><div class="line">        2. 点击事件定义好了需要在适配器中定义并添加带参的构造方法通知刷新</div><div class="line">        3. 在onCreateViewHolder方法中添加判断</div><div class="line">            1. 判断的条件是接口点击事件不为空</div><div class="line">                1. 给item设置点击事件</div><div class="line">                2. 并定义一个int型的参数= holder。getLayoutPosition</div><div class="line">                3. 点击事件的变量名.onClick(定义的int型的变量名)</div><div class="line">        4. 适配器配置好了之后再定义PopupWindow的地方添加点击事件</div><div class="line">            1. 适配器.set点击事件（new 接口点击事件（）&#123;PopupWindow.dismiss()；viewPager.setCurrentItem(position,false)&#125;）；</div><div class="line">            2. 添加False是为了ViewPager无回滚效果</div><div class="line">        5. 最后添加在显示PopupWindow显示的代码上面</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">popupWindow可以弹出一个浮动的窗口，可以显示在屏幕上任意的位置，比对话框更灵活，也可以通过setAnimationStyle方法设置popupWindow显示隐藏动画</div><div class="line">1. 让PopupWindow显示在某个控件之下</div><div class="line">    1. 在Activity或Fragment布局上添加控件，并添加该控件的点击事件，点击弹出PopupWindow</div><div class="line">    2. 先定义PopupWindow布局(布局中可以使用任意组件，若是RecycleLayout、ListView应在铺完主布局后再添加对应的item)</div><div class="line">    3. 在Activity或Fragent上绑定布局id</div><div class="line">    4. 自定义Void方法并在最外层布局中控件的点击事件里调用此方法，</div><div class="line">        1. 在方法内抽取PopupWindow布局</div><div class="line">        2. 设置PopupWindow弹出是的宽高</div><div class="line">            1. new PopupWindow（popup布局，LinearLayout.LayoutParams.宽，Line...ms.高）</div><div class="line">        3. 设置允许在外点击消失，必须给PopupWindow设置背景才会有效</div><div class="line">            1. pop.setOutsideTouchable(true);</div><div class="line">            2. pop.setBackgroundDrawable(new BitmapDrawable());</div><div class="line">        4. 让PopupWindow显示的位置</div><div class="line">            1. PopupWindow。showAsDropDown（显示在该控件下方，X位置偏移量，Y位置偏移量）</div><div class="line">2. 让PopupWindow显示在指定位置，从下往上弹出</div><div class="line">    1. 自定义方法</div><div class="line">        1. 在方法内抽取布局</div><div class="line">        2. 设置宽高</div><div class="line">        3. 设置允许在外点击消失</div><div class="line">        4. 设置背景颜色</div><div class="line">            1. setBackgroundDrawable(new ColorDrawable(颜色值))</div><div class="line">        5. 设置动画效果</div><div class="line">            1. setAnimationStyle(R.id动画的布局文件);</div><div class="line">        6. 让PopupWindow显示</div><div class="line">            1. 参数1：根视图，整个PopupWindow界面最顶层</div><div class="line">            2. 参数2：显示位置</div><div class="line">            3. 具体代码👇：</div><div class="line">                1. PopupWindow.showAtLocation(getWindow().getDecorView(),Gravity.BOTTOM,0,0)；</div><div class="line">3. PopupWindow点击跳转到对应的Fragment</div><div class="line">    1. 如果PopupWindow中放的是RecycleView</div><div class="line">        1. 那么首先就要先定义RecycleView的点击事件</div><div class="line">            1. 定义的点击事件必须是接口形式的存在interface</div><div class="line">            2. 可以直接存在使用点击事件的类中，也可以单独写一个接口类</div><div class="line">        2. 点击事件定义好了需要在适配器中定义并添加带参的构造方法通知刷新</div><div class="line">        3. 在onCreateViewHolder方法中添加判断</div><div class="line">            1. 判断的条件是接口点击事件不为空</div><div class="line">                1. 给item设置点击事件</div><div class="line">                2. 并定义一个int型的参数= holder。getLayoutPosition</div><div class="line">                3. 点击事件的变量名.onClick(定义的int型的变量名)</div><div class="line">        4. 适配器配置好了之后再定义PopupWindow的地方添加点击事件</div><div class="line">            1. 适配器.set点击事件（new 接口点击事件（）&#123;PopupWindow.dismiss()；viewPager.setCurrentItem(position,false)&#125;）；</div><div class="line">            2. 添加False是为了ViewPager无回滚效果</div><div class="line">        5. 最后添加在显示PopupWindow显示的代码上面</div></pre></td></tr></table></figure>
 
       
 
@@ -482,6 +493,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -519,24 +541,11 @@
     <article id="post-Android-WebView的使用方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-WebView的使用方法/">Android</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/19/Android-WebView的使用方法/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:05:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="WebView的使用方法"><a href="#WebView的使用方法" class="headerlink" title="WebView的使用方法"></a>WebView的使用方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">首先在Xml布局中添加WebView控件</div><div class="line">1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法</div><div class="line">2. 并且给ListVIew绑定之后设置点击事件：</div><div class="line">    1. 点击事件为setOnItemClickListenr（this）</div><div class="line">3. 创建显示二级界面的Activity</div><div class="line">4. 在onItemClick方法中填写Intent跳转</div><div class="line">    1. 定义String类型的网址（这个网址是从接口中解析出来的）</div><div class="line">    2. 将这个网址通过Intent传给对应显示的Activity</div><div class="line">    3. 最后startActivity（Intent）</div><div class="line">5. 在定义显示的Activity中</div><div class="line">    1. Intent intent = getintent（）；</div><div class="line">    2. 然后接受之前传来的网址</div><div class="line">        1. String str = intent。getStringExtra（“对应的口令”）；</div><div class="line">    3. 给WebView绑定视图</div><div class="line">    4. 给WebView绑定网址</div><div class="line">        1. webView。loadUrl（网址）</div><div class="line">    5. 设置视图</div><div class="line">        1. webView。getSettings().setJavaScriptEnabled(true);</div><div class="line">    6. 让webView显示在固定工程里</div><div class="line">        1. webView.setWebViewClient(new WebViewClient())</div><div class="line">6. 要是一级界面使用的RecycleView的话需要将方法写在RecycleView点击时间里</div></pre></td></tr></table></figure>
+        <hr>
+<p>title: WebView的使用方法<br>date: 2017-09-19 11:05:54<br>tags: </p>
+<h2 id="Android"><a href="#Android" class="headerlink" title="- Android"></a>- Android</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">首先在Xml布局中添加WebView控件</div><div class="line">1. 如果以及界面使用的是ListView那么在对应的Fragmetn中需要添加onItemClick方法</div><div class="line">2. 并且给ListVIew绑定之后设置点击事件：</div><div class="line">    1. 点击事件为setOnItemClickListenr（this）</div><div class="line">3. 创建显示二级界面的Activity</div><div class="line">4. 在onItemClick方法中填写Intent跳转</div><div class="line">    1. 定义String类型的网址（这个网址是从接口中解析出来的）</div><div class="line">    2. 将这个网址通过Intent传给对应显示的Activity</div><div class="line">    3. 最后startActivity（Intent）</div><div class="line">5. 在定义显示的Activity中</div><div class="line">    1. Intent intent = getintent（）；</div><div class="line">    2. 然后接受之前传来的网址</div><div class="line">        1. String str = intent。getStringExtra（“对应的口令”）；</div><div class="line">    3. 给WebView绑定视图</div><div class="line">    4. 给WebView绑定网址</div><div class="line">        1. webView。loadUrl（网址）</div><div class="line">    5. 设置视图</div><div class="line">        1. webView。getSettings().setJavaScriptEnabled(true);</div><div class="line">    6. 让webView显示在固定工程里</div><div class="line">        1. webView.setWebViewClient(new WebViewClient())</div><div class="line">6. 要是一级界面使用的RecycleView的话需要将方法写在RecycleView点击时间里</div></pre></td></tr></table></figure>
 
       
 
@@ -586,7 +595,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-Dialog实现方法/">Android</a>
+      <a class="article-title" href="/2017/09/19/Android-Dialog实现方法/">Dialog实现方法</a>
     </h1>
   
 
@@ -599,7 +608,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Dialog实现方法"><a href="#Dialog实现方法" class="headerlink" title="Dialog实现方法"></a>Dialog实现方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来</div><div class="line">1. 具体代码</div><div class="line">    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);</div><div class="line">2. 可以添加自定义布局给Dialog</div><div class="line">    1. dialog.setView(已经设置好的布局文件);</div><div class="line">    2. 其布局文件中的操作方法与正常布局文件的操作方法相同</div><div class="line">3. 自定义关闭Dialog按钮的点击事件中应该让Dialog先赋值给父类的AlertDialog</div><div class="line">    1. 也就是: AlertDialog alertDialog = dialog.show();这行代码既让dialog赋值给了父类,也开启了Dialog,原因是因为Dialog是没有dismiss方法的,所以要赋值给父类.</div><div class="line">    2. 这样就可以正常些Dialog布局上控件的点击事件了.</div><div class="line">    3. 在点击事件中用父类的AlertDialog.dismiss();这样自定的关闭Dialog按钮就写好了.</div><div class="line">4. 如果配合PopupWindow使用可能会出现PopupWindow无法收起的情况,如果出现了这种情况只需要在PopupWindow的点击事件中添加dismiss();方法就可已解决了.</div><div class="line">5. Dialog自带属性设置</div><div class="line">    1. 可以设置标题</div><div class="line">        1. setTitle</div><div class="line">    2. 设置内容(一般都是自定义内容)</div><div class="line">    3. 设置内容布局</div><div class="line">        1. setView</div><div class="line">    4. 可以设置自带的按钮</div><div class="line">        1. setNeutralButton</div><div class="line">    5. 设置YES按钮</div><div class="line">        1. setPositiveButton</div><div class="line">    6. 设置No按钮</div><div class="line">        1. setNegativeButton</div><div class="line">    7. 最后设置.show();方法即可显示对话框</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来</div><div class="line">1. 具体代码</div><div class="line">    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);</div><div class="line">2. 可以添加自定义布局给Dialog</div><div class="line">    1. dialog.setView(已经设置好的布局文件);</div><div class="line">    2. 其布局文件中的操作方法与正常布局文件的操作方法相同</div><div class="line">3. 自定义关闭Dialog按钮的点击事件中应该让Dialog先赋值给父类的AlertDialog</div><div class="line">    1. 也就是: AlertDialog alertDialog = dialog.show();这行代码既让dialog赋值给了父类,也开启了Dialog,原因是因为Dialog是没有dismiss方法的,所以要赋值给父类.</div><div class="line">    2. 这样就可以正常些Dialog布局上控件的点击事件了.</div><div class="line">    3. 在点击事件中用父类的AlertDialog.dismiss();这样自定的关闭Dialog按钮就写好了.</div><div class="line">4. 如果配合PopupWindow使用可能会出现PopupWindow无法收起的情况,如果出现了这种情况只需要在PopupWindow的点击事件中添加dismiss();方法就可已解决了.</div><div class="line">5. Dialog自带属性设置</div><div class="line">    1. 可以设置标题</div><div class="line">        1. setTitle</div><div class="line">    2. 设置内容(一般都是自定义内容)</div><div class="line">    3. 设置内容布局</div><div class="line">        1. setView</div><div class="line">    4. 可以设置自带的按钮</div><div class="line">        1. setNeutralButton</div><div class="line">    5. 设置YES按钮</div><div class="line">        1. setPositiveButton</div><div class="line">    6. 设置No按钮</div><div class="line">        1. setNegativeButton</div><div class="line">    7. 最后设置.show();方法即可显示对话框</div></pre></td></tr></table></figure>
 
       
 
@@ -608,6 +617,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -649,7 +669,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-在As中获得SHA1、MD5/">Android</a>
+      <a class="article-title" href="/2017/09/19/Android-在As中获得SHA1、MD5/">在As中获得SHA1、MD5</a>
     </h1>
   
 
@@ -662,7 +682,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="在As中获得SHA1、MD5"><a href="#在As中获得SHA1、MD5" class="headerlink" title="在As中获得SHA1、MD5"></a>在As中获得SHA1、MD5</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. 第一步需要将小机器人调成Android状态</div><div class="line">2. 选中Gradle Scripts</div><div class="line">3. 点击右边的Gradle、(操作下一步之前最好刷新一下)、展开MyApplication</div><div class="line">4. 展开Tasks、展开android</div><div class="line">5. 双击signingReport</div><div class="line">6. 看日志，(Run)点击绿色开始按钮旁边的按钮就能看到SHA1、MD5了</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. 第一步需要将小机器人调成Android状态</div><div class="line">2. 选中Gradle Scripts</div><div class="line">3. 点击右边的Gradle、(操作下一步之前最好刷新一下)、展开MyApplication</div><div class="line">4. 展开Tasks、展开android</div><div class="line">5. 双击signingReport</div><div class="line">6. 看日志，(Run)点击绿色开始按钮旁边的按钮就能看到SHA1、MD5了</div></pre></td></tr></table></figure>
 
       
 
@@ -671,6 +691,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -712,7 +743,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-删除指定文件下的所有文件/">Android</a>
+      <a class="article-title" href="/2017/09/19/Android-删除指定文件下的所有文件/">删除指定文件下的所有文件</a>
     </h1>
   
 
@@ -725,7 +756,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="删除指定文件下的所有文件"><a href="#删除指定文件下的所有文件" class="headerlink" title="删除指定文件下的所有文件"></a>删除指定文件下的所有文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"> 可以添加在app清理缓存功能中</div><div class="line"> 写在点击事件中直接调用下面的使用方式即可</div><div class="line"> 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹</div><div class="line">1. 定义一个方法</div><div class="line">2. static void deleteAllFiles(File root) &#123;</div><div class="line">    File files[] = root.listFiles();</div><div class="line">    if (files != null)</div><div class="line">        for (File f : files) &#123;</div><div class="line">            if (f.isDirectory()) &#123; // 判断是否为文件夹</div><div class="line">                deleteAllFiles(f);</div><div class="line">                try &#123;</div><div class="line">                    f.delete();</div><div class="line">                &#125; catch (Exception e) &#123;</div><div class="line">                &#125;</div><div class="line">            &#125; else &#123;</div><div class="line">                if (f.exists()) &#123; // 判断是否存在</div><div class="line">                    deleteAllFiles(f);</div><div class="line">                    try &#123;</div><div class="line">                        f.delete();</div><div class="line">                    &#125; catch (Exception e) &#123;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">3. 使用的时候:</div><div class="line">    1. deleteAllFiles(new File(Environment.getExternalStorageDirectory()+&quot;/要删除的文件夹名称/“);</div></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"> 可以添加在app清理缓存功能中</div><div class="line"> 写在点击事件中直接调用下面的使用方式即可</div><div class="line"> 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹</div><div class="line">1. 定义一个方法</div><div class="line">2. static void deleteAllFiles(File root) &#123;</div><div class="line">    File files[] = root.listFiles();</div><div class="line">    if (files != null)</div><div class="line">        for (File f : files) &#123;</div><div class="line">            if (f.isDirectory()) &#123; // 判断是否为文件夹</div><div class="line">                deleteAllFiles(f);</div><div class="line">                try &#123;</div><div class="line">                    f.delete();</div><div class="line">                &#125; catch (Exception e) &#123;</div><div class="line">                &#125;</div><div class="line">            &#125; else &#123;</div><div class="line">                if (f.exists()) &#123; // 判断是否存在</div><div class="line">                    deleteAllFiles(f);</div><div class="line">                    try &#123;</div><div class="line">                        f.delete();</div><div class="line">                    &#125; catch (Exception e) &#123;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">3. 使用的时候:</div><div class="line">    1. deleteAllFiles(new File(Environment.getExternalStorageDirectory()+&quot;/要删除的文件夹名称/“);</div></pre></td></tr></table></figure>
 
       
 
@@ -739,7 +770,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -779,27 +810,29 @@
 
 
   
-    <article id="post-Android-随记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-随记/">Android</a>
+      <a class="article-title" href="/2017/09/18/hello-world/">Hello World</a>
     </h1>
   
 
         
-        <a href="/2017/09/19/Android-随记/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:02:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
+        <a href="/2017/09/18/hello-world/" class="archive-article-date">
+  	<time datetime="2017-09-18T08:29:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="随记"><a href="#随记" class="headerlink" title="随记"></a>随记</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">1.okhttp 封装 张洪洋的博客中摘取,并且下载Demo 进行用到功能的摘抄与整理</div><div class="line">2. 请求成功后得到字符串,但是返回的是实体类形式,需要使用json转化成实体类进行操作</div><div class="line">3. ImageLoader进行图片加载,需要判断是不是https如果是https需要使用另一种方法进行封装添加证书才能加载</div><div class="line">4. 时间戳转换成时间的方法</div><div class="line">    1. 待完善</div><div class="line">5. 数字保留两位小数</div><div class="line">    1. 需要定义成float类型</div><div class="line">    2. 将float变量/100.00</div><div class="line">6. String 字符串截取</div><div class="line">    1. String str = &quot;一教楼101室”  </div><div class="line">    2. Pattern p = Pattern.compile(&quot;\\d+&quot;);  </div><div class="line">    3. Matcher m = p.matcher(str);  </div><div class="line">    4. m.find();  </div><div class="line">7. 图片的圆角处理</div><div class="line">    1. 待完善</div><div class="line">8. 图片转成Base64格式</div><div class="line">    1. </div><div class="line">    2. 图片处理</div><div class="line">        1. </div><div class="line">9. PopupWindow封装</div><div class="line">    1. 待完善</div><div class="line">10. Android 中 bitmap转成String字符串的方法</div><div class="line">    1. public static String bitmaptoString(Bitmap bitmap) &#123;</div><div class="line">    2. String string = null;</div><div class="line">    3. ByteArrayOutputStream bStream = new ByteArrayOutputStream();</div><div class="line">    4. bitmap.compress(CompressFormat.PNG, 40, bStream);</div><div class="line">    5. byte[] bytes = bStream.toByteArray();</div><div class="line">    6. string = Base64.encodeToString(bytes, Base64.DEFAULT);</div><div class="line">    7. return string;</div><div class="line">    8. &#125;</div><div class="line">11. TextView 显示固定字符数之后自动换行:</div><div class="line">    1. android:maxEms=“每行固定显示的字数”</div></pre></td></tr></table></figure>
+        <h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><blockquote>
+<p>博客正在完善中…</p>
+</blockquote>
 
       
 
@@ -812,7 +845,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/19/Android-随记/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/09/18/hello-world/">展开全文 >></a>
         </p>
       
 
@@ -842,10 +875,6 @@
 
 
   
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -943,7 +972,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
             
             <div class="clearfix"></div>
