@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://saml.vip/2017/09/19/Android-删除指定文件下的所有文件/index.html">
 <meta property="og:site_name" content="一个Android小白的记事本">
 <meta property="og:description" content="123456789101112131415161718192021222324252627 可以添加在app清理缓存功能中 写在点击事件中直接调用下面的使用方式即可 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹1. 定义一个方法2. static void deleteAllFiles(File root) &amp;#123;    File files[] = root.listFiles();">
-<meta property="og:updated_time" content="2017-09-21T03:26:44.000Z">
+<meta property="og:updated_time" content="2017-09-21T04:03:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="删除指定文件下的所有文件">
 <meta name="twitter:description" content="123456789101112131415161718192021222324252627 可以添加在app清理缓存功能中 写在点击事件中直接调用下面的使用方式即可 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹1. 定义一个方法2. static void deleteAllFiles(File root) &amp;#123;    File files[] = root.listFiles();">
@@ -186,7 +186,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"> 可以添加在app清理缓存功能中</div><div class="line"> 写在点击事件中直接调用下面的使用方式即可</div><div class="line"> 此方法只能删掉文件夹下所有文件并不能是删掉父文件夹</div><div class="line">1. 定义一个方法</div><div class="line">2. static void deleteAllFiles(File root) &#123;</div><div class="line">    File files[] = root.listFiles();</div><div class="line">    if (files != null)</div><div class="line">        for (File f : files) &#123;</div><div class="line">            if (f.isDirectory()) &#123; // 判断是否为文件夹</div><div class="line">                deleteAllFiles(f);</div><div class="line">                try &#123;</div><div class="line">                    f.delete();</div><div class="line">                &#125; catch (Exception e) &#123;</div><div class="line">                &#125;</div><div class="line">            &#125; else &#123;</div><div class="line">                if (f.exists()) &#123; // 判断是否存在</div><div class="line">                    deleteAllFiles(f);</div><div class="line">                    try &#123;</div><div class="line">                        f.delete();</div><div class="line">                    &#125; catch (Exception e) &#123;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">3. 使用的时候:</div><div class="line">    1. deleteAllFiles(new File(Environment.getExternalStorageDirectory()+&quot;/要删除的文件夹名称/“);</div></pre></td></tr></table></figure>
-<p>&lt;!—more–&gt;</p>
 
       
 
