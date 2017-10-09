@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://saml.vip">
   <title>Android-程序ANR产生的原因与解决思路 | 一个Android小白的记事本</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。 ANR的常见类型为： 1.KeyDispatchimeout(5 seconds) 主要类型，案件或触摸事件在特定时间内无响应2.Broa">
+  <meta name="description" content="ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android-程序ANR产生的原因与解决思路">
 <meta property="og:url" content="http://saml.vip/2017/10/09/Android-程序ANR产生的原因与解决思路/index.html">
 <meta property="og:site_name" content="一个Android小白的记事本">
-<meta property="og:description" content="ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。 ANR的常见类型为： 1.KeyDispatchimeout(5 seconds) 主要类型，案件或触摸事件在特定时间内无响应2.Broa">
-<meta property="og:updated_time" content="2017-10-09T07:41:55.000Z">
+<meta property="og:description" content="ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。">
+<meta property="og:updated_time" content="2017-10-09T07:50:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android-程序ANR产生的原因与解决思路">
-<meta name="twitter:description" content="ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。 ANR的常见类型为： 1.KeyDispatchimeout(5 seconds) 主要类型，案件或触摸事件在特定时间内无响应2.Broa">
+<meta name="twitter:description" content="ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。">
   
     <link rel="alternative" href="/atom.xml" title="一个Android小白的记事本" type="application/atom+xml">
   
@@ -189,6 +189,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。</p>
+<a id="more"></a>
 <h4 id="ANR的常见类型为："><a href="#ANR的常见类型为：" class="headerlink" title="ANR的常见类型为："></a>ANR的常见类型为：</h4><blockquote>
 <p>1.KeyDispatchimeout(5 seconds) 主要类型，案件或触摸事件在特定时间内无响应<br>2.BroadcastTimeout(10 seconds) BroadcastReceiver在特定时间内无法处理完成<br>3.ServiceTimeout(20 seconds) 小概率类型Service在特定的时间内无法处理完成</p>
 </blockquote>

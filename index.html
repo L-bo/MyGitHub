@@ -186,20 +186,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。</p>
-<h4 id="ANR的常见类型为："><a href="#ANR的常见类型为：" class="headerlink" title="ANR的常见类型为："></a>ANR的常见类型为：</h4><blockquote>
-<p>1.KeyDispatchimeout(5 seconds) 主要类型，案件或触摸事件在特定时间内无响应<br>2.BroadcastTimeout(10 seconds) BroadcastReceiver在特定时间内无法处理完成<br>3.ServiceTimeout(20 seconds) 小概率类型Service在特定的时间内无法处理完成</p>
-</blockquote>
-<h4 id="什么情况下会引发ANR："><a href="#什么情况下会引发ANR：" class="headerlink" title="什么情况下会引发ANR："></a>什么情况下会引发ANR：</h4><ul>
-<li>在Android中应用程序的响应是靠Activity Manager和WindowManager系统服务监视的，当检测到以下情况中的一个时就会针对特定的应用程序显示ANR</li>
-</ul>
-<blockquote>
-<p>1.应用进程的主线程，在五秒内没有响应事件(如：按下按钮没有响应)<br>2.BroadcastReceiver在10秒内没有执行完毕<br>3.应用进程的主线程在执行Service的各个生命周期函数时20s内没有处理完毕</p>
-</blockquote>
-<pre><code>造成以上情况的大致原因基本上就是主线程中存在耗时操作，或者线程阻塞、挂起、死循环等，当然也存在其他外在因素，比如cpu使用过高，或者文件读写频繁等等都会导致ANR的产生。
-</code></pre><h4 id="如何避免ANR的出现："><a href="#如何避免ANR的出现：" class="headerlink" title="如何避免ANR的出现："></a>如何避免ANR的出现：</h4><blockquote>
-<p>主线程如果需要做耗时操作时需要启子线程进行处理(如：网络请求、数据库操作等)<br>   BroadcastReceiver中如果有耗时操作，可以放到service中处理</p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2017/10/09/Android-程序ANR产生的原因与解决思路/#more">more >></a>
+        
       
 
       
@@ -460,25 +449,9 @@
 <p>2.创建显示二级界面<br>在onItemClick方法中填写Intent跳转</p>
 </blockquote>
 <p>定义网址(这个网址可以是从接口中解析出来的)<br>将这个网址通过Intent传递给对应显示的Activity<br>最后startActivity</p>
-<blockquote>
-<p>3.定义在显示的Activity中</p>
-</blockquote>
-<p><code>Intent intent = getintent();
-// 然后接受之前传来的网址
-String str = intent.getStringExtra(&quot;对应的值&quot;);</code> </p>
-<blockquote>
-<p>4.依次给WebView绑定视图、网址</p>
-</blockquote>
-<p><code>webView.loadUrl(&quot;网址&quot;)</code></p>
-<blockquote>
-<p>5.设置视图</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webView.getSttings(0.setJavaScriptEnabled(true)</div></pre></td></tr></table></figure>
-<blockquote>
-<p>6.让WebView显示在固定工程里</p>
-</blockquote>
-<p><code>webView.setWebViewClient(new WebViewClient())</code></p>
-<h5 id="如果一级界面使用的是RecycleView只需要将方法写在点击事件中即可"><a href="#如果一级界面使用的是RecycleView只需要将方法写在点击事件中即可" class="headerlink" title="如果一级界面使用的是RecycleView只需要将方法写在点击事件中即可"></a>如果一级界面使用的是RecycleView只需要将方法写在点击事件中即可</h5>
+        
+          <a class="article-more-a" href="/2017/09/20/WebView的实现方式/#more">more >></a>
+        
       
 
       
