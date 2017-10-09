@@ -165,6 +165,94 @@
             
   
     
+<article id="post-Android-程序ANR产生的原因与解决思路" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/09/Android-程序ANR产生的原因与解决思路/">Android-程序ANR产生的原因与解决思路</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/09/Android-程序ANR产生的原因与解决思路/" class="archive-article-date">
+  	<time datetime="2017-10-09T07:18:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ANR：即Appliaction Not Responding，在Android设备上，如果应用程序进程的主线程响应超时就会产生ANR，系统就会向用户展示一个提示框，用小米设备举例，基本提示内容为：“应用程序未响应”下面有两个按钮，一个是等待，一个是强制关闭。</p>
+<h4 id="ANR的常见类型为："><a href="#ANR的常见类型为：" class="headerlink" title="ANR的常见类型为："></a>ANR的常见类型为：</h4><blockquote>
+<p>1.KeyDispatchimeout(5 seconds) 主要类型，案件或触摸事件在特定时间内无响应<br>2.BroadcastTimeout(10 seconds) BroadcastReceiver在特定时间内无法处理完成<br>3.ServiceTimeout(20 seconds) 小概率类型Service在特定的时间内无法处理完成</p>
+</blockquote>
+<h4 id="什么情况下会引发ANR："><a href="#什么情况下会引发ANR：" class="headerlink" title="什么情况下会引发ANR："></a>什么情况下会引发ANR：</h4><ul>
+<li>在Android中应用程序的响应是靠Activity Manager和WindowManager系统服务监视的，当检测到以下情况中的一个时就会针对特定的应用程序显示ANR</li>
+</ul>
+<blockquote>
+<p>1.应用进程的主线程，在五秒内没有响应事件(如：按下按钮没有响应)<br>2.BroadcastReceiver在10秒内没有执行完毕<br>3.应用进程的主线程在执行Service的各个生命周期函数时20s内没有处理完毕</p>
+</blockquote>
+<pre><code>造成以上情况的大致原因基本上就是主线程中存在耗时操作，或者线程阻塞、挂起、死循环等，当然也存在其他外在因素，比如cpu使用过高，或者文件读写频繁等等都会导致ANR的产生。
+</code></pre><h4 id="如何避免ANR的出现："><a href="#如何避免ANR的出现：" class="headerlink" title="如何避免ANR的出现："></a>如何避免ANR的出现：</h4><blockquote>
+<p>主线程如果需要做耗时操作时需要启子线程进行处理(如：网络请求、数据库操作等)<br>   BroadcastReceiver中如果有耗时操作，可以放到service中处理</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/09/Android-程序ANR产生的原因与解决思路/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    
 <article id="post-使用Hexo-GitHub打造属于自己的博客-二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -877,81 +965,6 @@ String str = intent.getStringExtra(&quot;对应的值&quot;);</code> </p>
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/09/19/Android-Dialog实现方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    
-<article id="post-Android-在As中获得SHA1、MD5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-在As中获得SHA1、MD5/">在As中获得SHA1、MD5</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/19/Android-在As中获得SHA1、MD5/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:04:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. 第一步需要将小机器人调成Android状态</div><div class="line">2. 选中Gradle Scripts</div><div class="line">3. 点击右边的Gradle、(操作下一步之前最好刷新一下)、展开MyApplication</div><div class="line">4. 展开Tasks、展开android</div><div class="line">5. 双击signingReport</div><div class="line">6. 看日志，(Run)点击绿色开始按钮旁边的按钮就能看到SHA1、MD5了</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/19/Android-在As中获得SHA1、MD5/">展开全文 >></a>
         </p>
       
 
