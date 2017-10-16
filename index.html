@@ -164,6 +164,85 @@
             
   
     
+<article id="post-浅谈GitHub" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/16/浅谈GitHub/">浅谈GitHub</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/16/浅谈GitHub/" class="archive-article-date">
+  	<time datetime="2017-10-16T04:59:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h4><blockquote>
+<p>是一款免费的、开源的分布式版本控制系统，在使用的时候可以让每个开发者通过克隆，在本地拷贝服务器上的一个完整的GIT仓库，并且可以在自己的GIT上根据不同的开发项目创建分支，修改代码创建以及合并分支，在开发完成后需要将本地的代码在推送到服务器上。</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2017/10/16/浅谈GitHub/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/16/浅谈GitHub/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    
 <article id="post-Android-程序ANR产生的原因与解决思路" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -891,81 +970,6 @@
 
 
   
-    
-<article id="post-Android-Dialog实现方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-Dialog实现方法/">Dialog实现方法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/19/Android-Dialog实现方法/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:05:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来</div><div class="line">1. 具体代码</div><div class="line">    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);</div><div class="line">2. 可以添加自定义布局给Dialog</div><div class="line">    1. dialog.setView(已经设置好的布局文件);</div><div class="line">    2. 其布局文件中的操作方法与正常布局文件的操作方法相同</div><div class="line">3. 自定义关闭Dialog按钮的点击事件中应该让Dialog先赋值给父类的AlertDialog</div><div class="line">    1. 也就是: AlertDialog alertDialog = dialog.show();这行代码既让dialog赋值给了父类,也开启了Dialog,原因是因为Dialog是没有dismiss方法的,所以要赋值给父类.</div><div class="line">    2. 这样就可以正常些Dialog布局上控件的点击事件了.</div><div class="line">    3. 在点击事件中用父类的AlertDialog.dismiss();这样自定的关闭Dialog按钮就写好了.</div><div class="line">4. 如果配合PopupWindow使用可能会出现PopupWindow无法收起的情况,如果出现了这种情况只需要在PopupWindow的点击事件中添加dismiss();方法就可已解决了.</div><div class="line">5. Dialog自带属性设置</div><div class="line">    1. 可以设置标题</div><div class="line">        1. setTitle</div><div class="line">    2. 设置内容(一般都是自定义内容)</div><div class="line">    3. 设置内容布局</div><div class="line">        1. setView</div><div class="line">    4. 可以设置自带的按钮</div><div class="line">        1. setNeutralButton</div><div class="line">    5. 设置YES按钮</div><div class="line">        1. setPositiveButton</div><div class="line">    6. 设置No按钮</div><div class="line">        1. setNegativeButton</div><div class="line">    7. 最后设置.show();方法即可显示对话框</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/19/Android-Dialog实现方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1073,11 +1077,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
               </li>
             
             <div class="clearfix"></div>
