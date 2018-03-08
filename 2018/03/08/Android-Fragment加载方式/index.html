@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saml.vip">
-  <title>Dialog实现方法 | 一个Android小白的记事本</title>
+  <title>Android - Fragment加载方式 | 一个Android小白的记事本</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="123456789101112131415161718192021222324使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来1. 具体代码    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);2. 可以添加自定义布局给Dialog    1. dialog.setView(已经设置好的布局">
+  <meta name="description" content="首先介绍Fragment有几种加载方式  1.静态加载2.动态加载3.通过FragmentAdapter加载">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dialog实现方法">
-<meta property="og:url" content="http://saml.vip/2017/09/19/Android-Dialog实现方法/index.html">
+<meta property="og:title" content="Android - Fragment加载方式">
+<meta property="og:url" content="http://saml.vip/2018/03/08/Android-Fragment加载方式/index.html">
 <meta property="og:site_name" content="一个Android小白的记事本">
-<meta property="og:description" content="123456789101112131415161718192021222324使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来1. 具体代码    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);2. 可以添加自定义布局给Dialog    1. dialog.setView(已经设置好的布局">
-<meta property="og:updated_time" content="2017-09-20T03:00:02.000Z">
+<meta property="og:description" content="首先介绍Fragment有几种加载方式  1.静态加载2.动态加载3.通过FragmentAdapter加载">
+<meta property="og:updated_time" content="2018-03-08T14:47:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dialog实现方法">
-<meta name="twitter:description" content="123456789101112131415161718192021222324使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来1. 具体代码    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);2. 可以添加自定义布局给Dialog    1. dialog.setView(已经设置好的布局">
+<meta name="twitter:title" content="Android - Fragment加载方式">
+<meta name="twitter:description" content="首先介绍Fragment有几种加载方式  1.静态加载2.动态加载3.通过FragmentAdapter加载">
   
     <link rel="alternative" href="/atom.xml" title="一个Android小白的记事本" type="application/atom+xml">
   
@@ -167,28 +167,51 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-Android-Dialog实现方法" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-Android-Fragment加载方式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Dialog实现方法
+      Android - Fragment加载方式
     </h1>
   
 
         
-        <a href="/2017/09/19/Android-Dialog实现方法/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:05:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
+        <a href="/2018/03/08/Android-Fragment加载方式/" class="archive-article-date">
+  	<time datetime="2018-03-08T14:45:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来</div><div class="line">1. 具体代码</div><div class="line">    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);</div><div class="line">2. 可以添加自定义布局给Dialog</div><div class="line">    1. dialog.setView(已经设置好的布局文件);</div><div class="line">    2. 其布局文件中的操作方法与正常布局文件的操作方法相同</div><div class="line">3. 自定义关闭Dialog按钮的点击事件中应该让Dialog先赋值给父类的AlertDialog</div><div class="line">    1. 也就是: AlertDialog alertDialog = dialog.show();这行代码既让dialog赋值给了父类,也开启了Dialog,原因是因为Dialog是没有dismiss方法的,所以要赋值给父类.</div><div class="line">    2. 这样就可以正常些Dialog布局上控件的点击事件了.</div><div class="line">    3. 在点击事件中用父类的AlertDialog.dismiss();这样自定的关闭Dialog按钮就写好了.</div><div class="line">4. 如果配合PopupWindow使用可能会出现PopupWindow无法收起的情况,如果出现了这种情况只需要在PopupWindow的点击事件中添加dismiss();方法就可已解决了.</div><div class="line">5. Dialog自带属性设置</div><div class="line">    1. 可以设置标题</div><div class="line">        1. setTitle</div><div class="line">    2. 设置内容(一般都是自定义内容)</div><div class="line">    3. 设置内容布局</div><div class="line">        1. setView</div><div class="line">    4. 可以设置自带的按钮</div><div class="line">        1. setNeutralButton</div><div class="line">    5. 设置YES按钮</div><div class="line">        1. setPositiveButton</div><div class="line">    6. 设置No按钮</div><div class="line">        1. setNegativeButton</div><div class="line">    7. 最后设置.show();方法即可显示对话框</div></pre></td></tr></table></figure>
-
+        <p>首先介绍Fragment有几种加载方式</p>
+<blockquote>
+<p>1.静态加载<br>2.动态加载<br>3.通过FragmentAdapter加载</p>
+</blockquote>
+<a id="more"></a>
+<h5 id="静态加载Fragment"><a href="#静态加载Fragment" class="headerlink" title="静态加载Fragment"></a>静态加载Fragment</h5><ul>
+<li>通过布局静态加载Fragment</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">// 具体代码</div><div class="line">// xml布局文件</div><div class="line">&lt;fragment</div><div class="line">            android:id=&quot;@+id/fragment1&quot; // id必须要有</div><div class="line">            android:name=&quot;com.liubo.testactivity.fragment.TestFragmentOne&quot;</div><div class="line">// name == 我们自己创建的Fragment类</div><div class="line">            android:layout_width=&quot;wrap_content&quot;</div><div class="line">            android:layout_height=&quot;match_parent&quot;/&gt;</div><div class="line">            </div><div class="line">// TestFragmentOne类代码</div><div class="line">public class TestFragmentOne extends Fragment&#123;</div><div class="line">// 注意这里继承的Fragment是V4包下的</div><div class="line">    @Nullable</div><div class="line">    @Override</div><div class="line">    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) &#123;</div><div class="line">        // 这里下面所绑定的布局文件需要手动创建,之后Fragment上加载的控件以及布局内容都在这个xml中显示</div><div class="line">        return inflater.inflate(R.layout.testfragment1, container, false);</div><div class="line">    </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="动态加载Fragment"><a href="#动态加载Fragment" class="headerlink" title="动态加载Fragment"></a>动态加载Fragment</h5><ul>
+<li>通过FragmentManager来实现加载不同Fragment</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 具体代码</div><div class="line">FragmentManager manager = getSupportFragmentManager();</div><div class="line">FragmentTransaction transaction = manager.beginTransaction();</div><div class="line">transaction.replace(R.id.relativeLayout_main, new HomeFragment()); // 加载当前显示的Fragment</div><div class="line">        transaction.commit(); // 提交创建Fragment请求</div></pre></td></tr></table></figure>
+<p>上述代码只是加载单个Fragment,如果有多个Fragment的话可以使用按钮方式通过Button的点击事件onClick方法进行加载不同的Fragment具体使用哪种方法根据项目需求决定。</p>
+<h5 id="通过FragmentAdapter加载"><a href="#通过FragmentAdapter加载" class="headerlink" title="通过FragmentAdapter加载"></a>通过FragmentAdapter加载</h5><ul>
+<li>这种方式个人觉得相对比较简单代码量相对较少</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">// 具体代码</div><div class="line">// 首先需要添加依赖</div><div class="line">compile &apos;com.android.support:design:26.0.0-alpha1&apos;</div><div class="line">// 依赖的添加方式可以是手动粘贴到build.gradle文件下</div><div class="line">// 也可以搜索design进行添加</div><div class="line">// xml代码</div><div class="line">&lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:orientation=&quot;vertical&quot;&gt;</div><div class="line">        </div><div class="line">        // 注意这个TabLayout只有添加了design依赖之后才会出现</div><div class="line">        &lt;android.support.design.widget.TabLayout</div><div class="line">            android:id=&quot;@+id/testFragmentTablayout&quot;</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;80sp&quot;</div><div class="line">            android:background=&quot;#1569b9&quot;/&gt;</div><div class="line"></div><div class="line">        &lt;android.support.v4.view.ViewPager</div><div class="line">            android:id=&quot;@+id/testFragmentViewPager&quot;</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;match_parent&quot;/&gt;</div><div class="line">    &lt;/LinearLayout&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>基本xml代码没什么需要注意的TabLayout是可以自定义的具体后面在写接着看代码。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">// 1.创建Adapter</div><div class="line">public class TestFragmentAdapter extends FragmentPagerAdapter &#123;</div><div class="line">    // 用来添加Fragment</div><div class="line">    private List&lt;Fragment&gt; fragments;</div><div class="line">    // 用来存储Fragment标题</div><div class="line">    private String title[] = &#123;&quot;第一个Fragment&quot;,&quot;第二个Fragment&quot;&#125;;</div><div class="line"></div><div class="line">    public void setFragments(List&lt;Fragment&gt; fragments) &#123;</div><div class="line">        this.fragments = fragments;</div><div class="line">        notifyDataSetChanged();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public TestFragmentAdapter(FragmentManager fm) &#123;</div><div class="line">        super(fm);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public Fragment getItem(int position) &#123;</div><div class="line">        return fragments.get(position);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public int getCount() &#123;</div><div class="line">        return fragments != null ? fragments.size() : 0;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public CharSequence getPageTitle(int position) &#123;</div><div class="line">        // 设置Fragment标题</div><div class="line">        return title[position];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>2.之后创建Fragment以及对应的xml布局文件之前上面已经说过就不在重复。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">// 3.MainActivity中的代码</div><div class="line">// 初始化TabLayout、ViewPager绑定适配器添加之前创建好的Fragment到集合中之后设置TabLayout与ViewPager</div><div class="line"></div><div class="line">        mTabLayout = (TabLayout) findViewById(R.id.testFragmentTablayout);</div><div class="line">        mViewPager = (ViewPager) findViewById(R.id.testFragmentViewPager);</div><div class="line">        // 创建Fragment集合</div><div class="line">        List&lt;Fragment&gt; fragments = new ArrayList&lt;&gt;();</div><div class="line">        // 将Fragment添加到集合</div><div class="line">        fragments.add(new TestFragmentOne());</div><div class="line">        fragments.add(new TestFragmentTo());</div><div class="line">        // 初始化适配器</div><div class="line">        TestFragmentAdapter adapter = new TestFragmentAdapter(getSupportFragmentManager());</div><div class="line">        adapter.setFragments(fragments);</div><div class="line">        mViewPager.setAdapter(adapter);</div><div class="line">        // 设置ViewPager</div><div class="line">        mTabLayout.setupWithViewPager(mViewPager);</div></pre></td></tr></table></figure>
+<h4 id="随时更正"><a href="#随时更正" class="headerlink" title="随时更正"></a>随时更正</h4>
       
 
       
@@ -288,7 +311,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://saml.vip/2017/09/19/Android-Dialog实现方法/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://saml.vip/2018/03/08/Android-Fragment加载方式/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -302,18 +325,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/19/Android-PopupWindow实现弹出窗口/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PopupWindow实现弹出窗口
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/19/Android-在As中获得SHA1、MD5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">在As中获得SHA1、MD5</div>
+    <a href="/2017/10/28/浅谈-Android设计模式MVP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浅谈 - Android设计模式MVP</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -341,7 +355,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Android-Dialog实现方法" data-title="Dialog实现方法" data-url="http://saml.vip/2017/09/19/Android-Dialog实现方法/"></div>
+	<div class="ds-thread" data-thread-key="Android-Fragment加载方式" data-title="Android - Fragment加载方式" data-url="http://saml.vip/2018/03/08/Android-Fragment加载方式/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -364,8 +378,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://saml.vip/2017/09/19/Android-Dialog实现方法/", 
-    sourceId: "Android-Dialog实现方法",
+    url: "http://saml.vip/2018/03/08/Android-Fragment加载方式/", 
+    sourceId: "Android-Fragment加载方式",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -374,7 +388,7 @@
   
 
   
-  <div id="SOHUCS" sid="Android-Dialog实现方法" ></div> 
+  <div id="SOHUCS" sid="Android-Fragment加载方式" ></div> 
 <script type="text/javascript"> 
 window.YiliaChangyanWrap = function() {
     var appid = "true"; 

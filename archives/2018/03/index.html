@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saml.vip">
-  <title>Dialog实现方法 | 一个Android小白的记事本</title>
+  <title>Archives: 2018/3 | 一个Android小白的记事本</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="123456789101112131415161718192021222324使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来1. 具体代码    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);2. 可以添加自定义布局给Dialog    1. dialog.setView(已经设置好的布局">
-<meta name="keywords" content="Android">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Dialog实现方法">
-<meta property="og:url" content="http://saml.vip/2017/09/19/Android-Dialog实现方法/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="一个Android小白的记事本">
+<meta property="og:url" content="http://saml.vip/archives/2018/03/index.html">
 <meta property="og:site_name" content="一个Android小白的记事本">
-<meta property="og:description" content="123456789101112131415161718192021222324使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来1. 具体代码    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);2. 可以添加自定义布局给Dialog    1. dialog.setView(已经设置好的布局">
-<meta property="og:updated_time" content="2017-09-20T03:00:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dialog实现方法">
-<meta name="twitter:description" content="123456789101112131415161718192021222324使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来1. 具体代码    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);2. 可以添加自定义布局给Dialog    1. dialog.setView(已经设置好的布局">
+<meta name="twitter:title" content="一个Android小白的记事本">
   
     <link rel="alternative" href="/atom.xml" title="一个Android小白的记事本" type="application/atom+xml">
   
@@ -167,66 +162,35 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-Android-Dialog实现方法" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      Dialog实现方法
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/03/08/Android-Fragment加载方式/" class="archive-article-date">
+  	<time datetime="2018-03-08T14:45:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-08</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/03/08/Android-Fragment加载方式/">Android - Fragment加载方式</a>
     </h1>
   
 
-        
-        <a href="/2017/09/19/Android-Dialog实现方法/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:05:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">使用Dialog时应该先进行初始化绑定也就是new一个Dialog出来</div><div class="line">1. 具体代码</div><div class="line">    1. AlertDialog dialog = new AlertDialog.Builder(对应的Activity.this);</div><div class="line">2. 可以添加自定义布局给Dialog</div><div class="line">    1. dialog.setView(已经设置好的布局文件);</div><div class="line">    2. 其布局文件中的操作方法与正常布局文件的操作方法相同</div><div class="line">3. 自定义关闭Dialog按钮的点击事件中应该让Dialog先赋值给父类的AlertDialog</div><div class="line">    1. 也就是: AlertDialog alertDialog = dialog.show();这行代码既让dialog赋值给了父类,也开启了Dialog,原因是因为Dialog是没有dismiss方法的,所以要赋值给父类.</div><div class="line">    2. 这样就可以正常些Dialog布局上控件的点击事件了.</div><div class="line">    3. 在点击事件中用父类的AlertDialog.dismiss();这样自定的关闭Dialog按钮就写好了.</div><div class="line">4. 如果配合PopupWindow使用可能会出现PopupWindow无法收起的情况,如果出现了这种情况只需要在PopupWindow的点击事件中添加dismiss();方法就可已解决了.</div><div class="line">5. Dialog自带属性设置</div><div class="line">    1. 可以设置标题</div><div class="line">        1. setTitle</div><div class="line">    2. 设置内容(一般都是自定义内容)</div><div class="line">    3. 设置内容布局</div><div class="line">        1. setView</div><div class="line">    4. 可以设置自带的按钮</div><div class="line">        1. setNeutralButton</div><div class="line">    5. 设置YES按钮</div><div class="line">        1. setPositiveButton</div><div class="line">    6. 设置No按钮</div><div class="line">        1. setNegativeButton</div><div class="line">    7. 最后设置.show();方法即可显示对话框</div></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板赞赏!<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://owm05nmzp.bkt.clouddn.com/image/payalpay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://owm05nmzp.bkt.clouddn.com/image/payweixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -238,173 +202,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://saml.vip/2017/09/19/Android-Dialog实现方法/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/09/19/Android-PopupWindow实现弹出窗口/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PopupWindow实现弹出窗口
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/09/19/Android-在As中获得SHA1、MD5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">在As中获得SHA1、MD5</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Android-Dialog实现方法" data-title="Dialog实现方法" data-url="http://saml.vip/2017/09/19/Android-Dialog实现方法/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://saml.vip/2017/09/19/Android-Dialog实现方法/", 
-    sourceId: "Android-Dialog实现方法",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-  <div id="SOHUCS" sid="Android-Dialog实现方法" ></div> 
-<script type="text/javascript"> 
-window.YiliaChangyanWrap = function() {
-    var appid = "true"; 
-    var conf = "true"; 
-    var width = window.innerWidth || document.documentElement.clientWidth; 
-    if (width < 960) { 
-    window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
-}
-</script>
-  
-
-  
-    <section id="comments">
-      <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'true'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
-  
-
-  
+    
 
 
           </div>
@@ -433,8 +243,8 @@ window.YiliaChangyanWrap = function() {
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

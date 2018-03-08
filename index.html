@@ -164,6 +164,86 @@
             
   
     
+<article id="post-Android-Fragment加载方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/08/Android-Fragment加载方式/">Android - Fragment加载方式</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/08/Android-Fragment加载方式/" class="archive-article-date">
+  	<time datetime="2018-03-08T14:45:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先介绍Fragment有几种加载方式</p>
+<blockquote>
+<p>1.静态加载<br>2.动态加载<br>3.通过FragmentAdapter加载</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2018/03/08/Android-Fragment加载方式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/08/Android-Fragment加载方式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    
 <article id="post-浅谈-Android设计模式MVP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -897,81 +977,6 @@
 
 
   
-    
-<article id="post-Android-使用SQLite导入外部数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/Android-使用SQLite导入外部数据库/">使用SQLite导入外部数据库</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/19/Android-使用SQLite导入外部数据库/" class="archive-article-date">
-  	<time datetime="2017-09-19T03:07:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">需要用到的知识点有数据库的查找、数据库的查询、以及读流、保存本地等。。。</div><div class="line">1. 先通过控制台找到想用的数据库并导出</div><div class="line">    1. 此处使用的是SQLite语句</div><div class="line">2. 将导出的数据库导入到自己项目res下的raw文件夹</div><div class="line">3. 创建一个类用来将数据库倒成可读写的文件，并保存到本地，然后可在该类中添加数据库的操作方法</div><div class="line">4. 具体工具类的创建👇:</div><div class="line">    1. 首先需要先定义数据库的存储空间大小</div><div class="line">    2. 定义全局自己的数据库名字（别忘了.db后缀名）</div><div class="line">    3. 定义全局的包名</div><div class="line">    4. 定义保存在手里存放数据库的位置(具体代码👇)：</div><div class="line">        1. “/data”+Environment.getDataDirectory().getAbsolutePath()+”/”+定义过得全局包名;</div><div class="line">    5. 定义全局的SQLiteDatabase</div><div class="line">    6. 全局Context</div><div class="line">    7. 还需要一个SQLiteDatabase用于以后的数据库查询</div><div class="line">    8. 添加构造方法参数为Context</div><div class="line">    9. 在定义一个无返回值的方法，用来打开数据库，方法内👇：</div><div class="line">        1. this.定义过得SQLiteDatabase=this.openDatabase(存放在手机里的位置+“/”+数据库名字)；</div><div class="line">    10. 自定义带参数的构造方法参数为（String  xxx）</div><div class="line">        1. 需要将以下内容放进try，cath里</div><div class="line">        2. 然后进行判断数据库文件书否存在，若不存在则执行导入，否则直接打开数据库，判断里的内容</div><div class="line">            1. !(new File(xxx).exists)</div><div class="line">        3. 添加如导入的数据库</div><div class="line">            1. InputStream is =this.context.getResources().openRawResource(R.raw.导入的外部数据库名称）</div><div class="line">            2. FileOutputStream for = new FileOutputStream(构造方法中的参数)</div><div class="line">            3. byte[] buffer = new byte[数据库存贮的最大空间]</div><div class="line">            4. 定义int类型的变量并赋值为0</div><div class="line">                1. while循环，循环参数👇：</div><div class="line">                    1. count = is.read(buffer) &gt; 0</div><div class="line">                2. 循环的内容👇：</div><div class="line">                    1. fos.write(buffer, 0, count)</div><div class="line">            5. 关流(fos.close)&amp;&amp;is.close</div><div class="line">            6. 打开或者创建一个数据库并定义成全局SQLiteDatabase</div><div class="line">                1. SQLiteDatabase db = SQLiteDatabase。openOrCreateDatabase(dbfile， null)；</div><div class="line">                2. return db；</div><div class="line">        4. 接下来就可以写数据库的CRUD方法了</div><div class="line">    11. 在其他类调用的时候只需要用无惨的构造方法点到承载数据库操作的方法就好了</div><div class="line">    12. 在要使用的地方new 一个DBMeager然后获得数据库的读写权限，使用后记得调用关闭数据库的方法。</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/19/Android-使用SQLite导入外部数据库/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -986,7 +991,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Sam
+    		&copy; 2018 Sam
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
