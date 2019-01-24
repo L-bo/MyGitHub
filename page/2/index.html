@@ -164,6 +164,81 @@
             
   
     
+<article id="post-Android-Banner实现轮播图功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/19/Android-Banner实现轮播图功能/">Banner实现轮播图功能</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/19/Android-Banner实现轮播图功能/" class="archive-article-date">
+  	<time datetime="2017-09-19T03:08:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">使用Banner添加轮播图功能之前需要先添加依赖👇：</div><div class="line">      compile  ‘com.youth.banner:banner:1.4.4’</div><div class="line">        （注意：添加Glide图片处理依赖）</div><div class="line">具体使用步骤：</div><div class="line">1. 首先在XML布局中添加Banner当做正常的ImageView来写布局</div><div class="line">2. 在Activity/Fragment中绑定Banner，并定义全局变量</div><div class="line">3. 创建轮播图的类</div><div class="line">    1. 轮播图的类需要继承ImageLoader</div><div class="line">    2. 复写ImageLoader中的displayImage方法</div><div class="line">    3. 再其方法中添加Glide.with(context).load(path).into(imageView)</div><div class="line">        1. 参数2：图片地址/网络请求图片的实体类点出来的/图片名</div><div class="line">        2. 参数3：控件（ImageView）</div><div class="line">4. 定义一个集合来承载轮播图</div><div class="line">    1. 将解析好的轮播图添加到集合</div><div class="line">5. 完善轮播图</div><div class="line">    1. 添加轮播图下面的点：banner.setBannerStyle(BannerConfig.CIRCLE_INDICAROR_TITLE);</div><div class="line">    2. 轮播图的类： banner.setImageLoader(new 轮播图的类);</div><div class="line">    3. 将集合设置个Banner：</div><div class="line">        1.  banner.setImages(承载图片的集合)；</div><div class="line">        2. banner.setBannerAnimation(Transformer.DepthPage);</div><div class="line">        3. banner.isAutoPlay(true);</div><div class="line">    4. 设置自动滚动时间：</div><div class="line">        1. banner.setDelayTime(2000);</div><div class="line">        2. banner.setIndicatorGravity(BannerConfig.CENTER);</div><div class="line">    5. 最后start开启</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/19/Android-Banner实现轮播图功能/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    
 <article id="post-Android-倒计时功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -693,7 +768,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Sam
+    		&copy; 2019 Sam
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
